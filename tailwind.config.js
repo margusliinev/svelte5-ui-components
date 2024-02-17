@@ -32,7 +32,6 @@ export default {
             colors: {
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
-                navbar: 'var(--navbar)',
 
                 primary: {
                     DEFAULT: 'var(--primary)',
@@ -54,10 +53,15 @@ export default {
                     foreground: 'var(--warning-foreground)',
                     hover: 'var(--warning-hover)'
                 },
-                destructive: {
-                    DEFAULT: 'var(--destructive)',
-                    foreground: 'var(--destructive-foreground)',
-                    hover: 'var(--destructive-hover)'
+                danger: {
+                    DEFAULT: 'var(--danger)',
+                    foreground: 'var(--danger-foreground)',
+                    hover: 'var(--danger-hover)'
+                },
+                info: {
+                    DEFAULT: 'var(--info)',
+                    foreground: 'var(--info-foreground)',
+                    hover: 'var(--info-hover)'
                 },
                 input: {
                     DEFAULT: 'var(--input)',
@@ -74,6 +78,16 @@ export default {
                     DEFAULT: 'var(--card)',
                     hover: 'var(--card-hover)'
                 }
+            },
+            borderRadius: {
+                DEFAULT: 'var(--radius)',
+                xs: 'calc(var(--radius) - 4px)',
+                sm: 'calc(var(--radius) - 2px)',
+                md: 'calc(var(--radius) + 2px)',
+                lg: 'calc(var(--radius) + 4px)',
+                xl: 'calc(var(--radius) + 8px)',
+                '2xl': 'calc(var(--radius) + 12px)',
+                '3xl': 'calc(var(--radius) + 20px)'
             }
         }
     },

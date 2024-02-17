@@ -1,12 +1,16 @@
 <script>
+    // @ts-nocheck
+
     import '../styles/fonts.css'
     import '../styles/index.css'
+
+    let { data } = $props()
 </script>
 
-<div class="min-h-[calc(screen - 4rem)] mx-auto max-w-screen-2xl md:w-screen-80">
-    <header class="grid h-24 grid-cols-[auto_1fr] items-center bg-purple-100">
+<div class="min-h-[calc(screen - 4rem)] mx-auto w-screen-90 max-w-screen-xl lg:w-screen-80">
+    <header class="grid h-24 grid-cols-[auto_1fr] items-center">
         <div class="w-60">
-            <h1>Svelte 5 UI Components</h1>
+            <h1 class="text-xl font-black uppercase italic text-primary">Svelte 5 UI</h1>
         </div>
         <div class="flex items-center justify-between">
             <nav>
@@ -27,88 +31,20 @@
             </div>
         </div>
     </header>
-    <div class="grid md:grid-cols-[auto_1fr]">
-        <aside class="hidden w-60 bg-emerald-100 md:grid">
-            <h4 class="text-xs font-medium uppercase text-secondary">Components</h4>
-            <ul class="flex flex-col gap-2">
+    <div class="grid lg:grid-cols-[auto_1fr]">
+        <aside class="hidden w-60 lg:grid">
+            <h4 class="mb-4 text-xs font-medium uppercase text-secondary">Components</h4>
+            <ul class="flex max-w-[200px] flex-col gap-2">
                 <li>
-                    <a href="/accordion">Accordion</a>
+                    <a href="/alert" class={data.route === '/alert' ? 'grid h-8 w-full items-center rounded-md bg-slate-200 pl-4 text-sm' : 'grid h-8 items-center rounded-md pl-4 text-sm'}>Alert</a>
                 </li>
                 <li>
-                    <a href="/alert">Alert</a>
-                </li>
-                <li>
-                    <a href="/badge">Badge</a>
-                </li>
-                <li>
-                    <a href="/breadcrumb">Breadcrumb</a>
-                </li>
-                <li>
-                    <a href="/button">Button</a>
-                </li>
-                <li>
-                    <a href="/card">Card</a>
-                </li>
-                <li>
-                    <a href="/carousel">Carousel</a>
-                </li>
-                <li>
-                    <a href="/checkbox">Checkbox</a>
-                </li>
-                <li>
-                    <a href="/collapse">Collapse</a>
-                </li>
-                <li>
-                    <a href="/dropdown">Dropdown</a>
-                </li>
-                <li>
-                    <a href="/form">Form</a>
-                </li>
-                <li>
-                    <a href="/input">Input</a>
-                </li>
-                <li>
-                    <a href="/modal">Modal</a>
-                </li>
-                <li>
-                    <a href="/nav">Nav</a>
-                </li>
-                <li>
-                    <a href="/pagination">Pagination</a>
-                </li>
-                <li>
-                    <a href="/popover">Popover</a>
-                </li>
-                <li>
-                    <a href="/progress">Progress</a>
-                </li>
-                <li>
-                    <a href="/radio">Radio</a>
-                </li>
-                <li>
-                    <a href="/select">Select</a>
-                </li>
-                <li>
-                    <a href="/spinner">Spinner</a>
-                </li>
-                <li>
-                    <a href="/switch">Switch</a>
-                </li>
-                <li>
-                    <a href="/table">Table</a>
-                </li>
-                <li>
-                    <a href="/tabs">Tabs</a>
-                </li>
-                <li>
-                    <a href="/tag">Tag</a>
-                </li>
-                <li>
-                    <a href="/textarea">Textarea </a>
+                    <a href="/button" class={data.route === '/button' ? 'grid h-8 w-full items-center rounded-md bg-slate-200 pl-4 text-sm' : 'grid h-8 items-center rounded-md pl-4 text-sm'}>Button</a
+                    >
                 </li>
             </ul>
         </aside>
-        <main class="bg-blue-100">
+        <main class="rounded-lg bg-white shadow-md">
             <slot />
         </main>
     </div>

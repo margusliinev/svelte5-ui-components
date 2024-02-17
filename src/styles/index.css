@@ -4,29 +4,28 @@
 
 @layer base {
     :root {
-        --background: #f4fbff;
-        --foreground: #18181b;
-        --navbar: #f4fbff;
+        --background: #f9fafb;
+        --foreground: #111827;
 
-        --primary: #0284c7;
-        --primary-foreground: #f4fbff;
-        --primary-hover: #0369a1;
+        --primary: #ea580c;
+        --primary-foreground: #f9fafb;
+        --primary-hover: #c2410c;
 
         --secondary: #71717a;
-        --secondary-foreground: #f4fbff;
+        --secondary-foreground: #f9fafb;
         --secondary-hover: #52525a;
 
         --success: #10b981;
-        --success-foreground: #f4fbff;
+        --success-foreground: #f9fafb;
         --success-hover: #059669;
 
         --warning: #eab308;
-        --warning-foreground: #f4fbff;
+        --warning-foreground: #f9fafb;
         --warning-hover: #ca8a04;
 
-        --destructive: #ef4444;
-        --destructive-foreground: #f4fbff;
-        --destructive-hover: #dc2626;
+        --danger: #ef4444;
+        --danger-foreground: #f9fafb;
+        --danger-hover: #dc2626;
 
         --input: #fff;
         --input-focus: #0284c7;
@@ -35,44 +34,49 @@
 
         --border: #d4d4d8;
         --border-strong: #a1a1aa;
+
         --card: #ffffff;
-        --card-hover: #fafafa;
+        --card-hover: #f9fafb;
+
+        --radius: 0.25rem;
     }
 
     [data-theme='dark'] {
-        --background: #18181b;
-        --foreground: #f4fbff;
-        --navbar: #1c1c20;
+        --background: #111827;
+        --foreground: #f9fafb;
 
         --primary: #7dd3fc;
-        --primary-foreground: #18181b;
+        --primary-foreground: #111827;
         --primary-hover: #bae6fd;
 
         --secondary: #a1a1aa;
-        --secondary-foreground: #18181b;
+        --secondary-foreground: #111827;
         --secondary-hover: #d4d4d8;
 
         --success: #34d399;
-        --success-foreground: #18181b;
+        --success-foreground: #111827;
         --success-hover: #6ee7b7;
 
         --warning: #facc15;
-        --warning-foreground: #18181b;
+        --warning-foreground: #111827;
         --warning-hover: #fde047;
 
-        --destructive: #f87171;
-        --destructive-foreground: #18181b;
-        --destructive-hover: #fca5a5;
+        --danger: #f87171;
+        --danger-foreground: #111827;
+        --danger-hover: #fca5a5;
 
-        --input: #18181b;
+        --input: #111827;
         --input-focus: #7dd3fc;
         --input-placeholder: #a1a1aa;
         --input-invalid: #fca5a5;
 
         --border: #3f3f46;
         --border-strong: #52525b;
+
         --card: #27272a;
         --card-hover: #3f3f46;
+
+        --radius: 0.25rem;
     }
 
     body {
