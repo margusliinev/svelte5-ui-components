@@ -5,11 +5,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                Inter: ['Inter', 'Inter Fallback']
-            },
-            screens: {
-                xs: '560px',
-                xxs: '440px'
+                Inter: ['Inter', 'Inter Fallback', 'sans-serif']
             },
             width: {
                 'screen-90': '90vw',
