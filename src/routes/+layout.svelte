@@ -1,6 +1,7 @@
 <script>
     // @ts-nocheck
 
+    import ThemeToggle from '$components/ThemeToggle.svelte'
     import '../styles/fonts.css'
     import '../styles/index.css'
 
@@ -27,11 +28,11 @@
                 </ul>
             </nav>
             <div>
-                <span>Dark Mode</span>
+                <ThemeToggle />
             </div>
         </div>
     </header>
-    <div class="grid lg:grid-cols-[auto_1fr]">
+    <div class="grid items-start lg:grid-cols-[auto_1fr]">
         <aside class="hidden w-60 lg:grid">
             <h4 class="mb-4 text-xs font-medium uppercase text-secondary">Components</h4>
             <ul class="flex max-w-[200px] flex-col gap-2">
@@ -44,7 +45,7 @@
                 </li>
             </ul>
         </aside>
-        <main class="rounded-lg bg-white shadow-md">
+        <main class="rounded-lg border border-border bg-white shadow-sm">
             <slot />
         </main>
     </div>
