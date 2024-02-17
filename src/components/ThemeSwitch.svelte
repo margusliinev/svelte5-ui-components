@@ -2,9 +2,9 @@
     /* eslint-disable */
     import type { SubmitFunction } from '@sveltejs/kit'
     import { Button } from '$components'
-    import { page } from '$app/stores'
     import { enhance } from '$app/forms'
-    import Icon from '../icons/Icon.svelte'
+    import { page } from '$app/stores'
+    import { Icon } from '$components'
 
     const submitUpdateTheme: SubmitFunction = ({ action }) => {
         const theme = action.searchParams.get('theme')
@@ -16,10 +16,10 @@
 </script>
 
 <form method="post" use:enhance={submitUpdateTheme}>
-    <Button variant="icon" size="none" formaction="/?/setTheme&theme=dark&redirectTo={$page.url}" class="inline-flex dark:hidden">
-        <Icon name="sun" size="sm" strokeWidth="2" />
+    <Button variant="none" size="none" formaction="/?/setTheme&theme=dark&redirectTo={$page.url}" class="inline-flex dark:hidden">
+        <Icon name="sun" size="sm" />
     </Button>
-    <Button variant="icon" size="none" formaction="/?/setTheme&theme=light&redirectTo={$page.url}" class="hidden dark:inline-flex">
-        <Icon name="moon" size="sm" strokeWidth="2" />
+    <Button variant="none" size="none" formaction="/?/setTheme&theme=light&redirectTo={$page.url}" class="hidden dark:inline-flex">
+        <Icon name="moon" size="sm" />
     </Button>
 </form>

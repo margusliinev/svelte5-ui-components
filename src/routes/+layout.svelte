@@ -1,7 +1,5 @@
 <script>
-    // @ts-nocheck
-
-    import ThemeToggle from '$components/ThemeToggle.svelte'
+    import { ThemeSwitch } from '$components'
     import '../styles/fonts.css'
     import '../styles/index.css'
 
@@ -28,7 +26,7 @@
                 </ul>
             </nav>
             <div>
-                <ThemeToggle />
+                <ThemeSwitch />
             </div>
         </div>
     </header>

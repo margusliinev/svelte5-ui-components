@@ -58,11 +58,6 @@ export default {
                     foreground: 'var(--danger-foreground)',
                     hover: 'var(--danger-hover)'
                 },
-                info: {
-                    DEFAULT: 'var(--info)',
-                    foreground: 'var(--info-foreground)',
-                    hover: 'var(--info-hover)'
-                },
                 input: {
                     DEFAULT: 'var(--input)',
                     border: 'var(--input-border)',
@@ -81,13 +76,15 @@ export default {
             },
             borderRadius: {
                 DEFAULT: 'var(--radius)',
+                none: '0px',
                 xs: 'calc(var(--radius) - 4px)',
                 sm: 'calc(var(--radius) - 2px)',
                 md: 'calc(var(--radius) + 2px)',
                 lg: 'calc(var(--radius) + 4px)',
                 xl: 'calc(var(--radius) + 8px)',
                 '2xl': 'calc(var(--radius) + 12px)',
-                '3xl': 'calc(var(--radius) + 20px)'
+                '3xl': 'calc(var(--radius) + 20px)',
+                full: '9999px'
             }
         }
     },
