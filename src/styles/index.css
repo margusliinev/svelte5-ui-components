@@ -4,28 +4,30 @@
 
 @layer base {
     :root {
-        --background: 250 250 250;
-        --foreground: 24 24 27;
+        --background: 0 0% 98%;
+        --background-hover: 0 0% 100%;
+        --foreground: 240 5% 15%;
+        --foreground-hover: 240 10% 5%;
 
-        --primary: 2 132 199;
-        --primary-foreground: 250 250 250;
-        --primary-hover: 3 105 161;
+        --primary: 200 98% 35%;
+        --primary-foreground: 0 0% 98%;
+        --primary-hover: 200 98% 30%;
 
-        --secondary: 82 82 91;
-        --secondary-foreground: 250 250 250;
-        --secondary-hover: 63 63 70;
+        --secondary: 240 5% 35%;
+        --secondary-foreground: 0 0% 98%;
+        --secondary-hover: 240 5% 25%;
 
-        --success: 5 150 105;
-        --success-foreground: 250 250 250;
-        --success-hover: 4 120 87;
+        --success: 160 93% 30%;
+        --success-foreground: 0 0% 98%;
+        --success-hover: 160 93% 25%;
 
-        --warning: 202 138 4;
-        --warning-foreground: 250 250 250;
-        --warning-hover: 161 98 7;
+        --warning: 40 95% 40%;
+        --warning-foreground: 0 0% 98%;
+        --warning-hover: 40 95% 35%;
 
-        --danger: 220 38 38;
-        --danger-foreground: 250 250 250;
-        --danger-hover: 185 28 28;
+        --danger: 0 72% 50%;
+        --danger-foreground: 0 0% 98%;
+        --danger-hover: 0 72% 45%;
 
         --input: #fff;
         --input-focus: #0284c7;
@@ -36,36 +38,38 @@
         --border-strong: #a1a1aa;
 
         --card: #ffffff;
-        --card-hover: 250 250 250;
+        --card-hover: 0 0% 98%;
 
         --radius: 0.25rem;
     }
 
     [data-theme='dark'] {
-        --background: 24 24 27;
-        --foreground: 250 250 250;
+        --background: 240 5% 15%;
+        --background-hover: 240 10% 5%;
+        --foreground: 0 0% 98%;
+        --foreground-hover: 0 0% 100%;
 
-        --primary: 125 211 252;
-        --primary-foreground: 24 24 27;
-        --primary-hover: 186 230 253;
+        --primary: 200 95% 80%;
+        --primary-foreground: 240 5% 15%;
+        --primary-hover: 200 95% 90%;
 
-        --secondary: 212 212 216;
-        --secondary-foreground: 24 24 27;
-        --secondary-hover: 228 228 231;
+        --secondary: 240 5% 85%;
+        --secondary-foreground: 240 5% 15%;
+        --secondary-hover: 240 5% 95%;
 
-        --success: 52 211 153;
-        --success-foreground: 24 24 27;
-        --success-hover: 110 231 183;
+        --success: 160 65% 50%;
+        --success-foreground: 240 5% 15%;
+        --success-hover: 160 65% 70%;
 
-        --warning: 250 204 21;
-        --warning-foreground: 24 24 27;
-        --warning-hover: 253 224 71;
+        --warning: 50 95% 50%;
+        --warning-foreground: 240 5% 15%;
+        --warning-hover: 50 95% 70%;
 
-        --danger: 248 113 113;
-        --danger-foreground: 24 24 27;
-        --danger-hover: 252 165 165;
+        --danger: 0 90% 70%;
+        --danger-foreground: 240 5% 15%;
+        --danger-hover: 0 90% 80%;
 
-        --input: 24 24 27;
+        --input: 240 5% 15%;
         --input-focus: #7dd3fc;
         --input-placeholder: #a1a1aa;
         --input-invalid: #fca5a5;
@@ -75,11 +79,9 @@
 
         --card: #27272a;
         --card-hover: #3f3f46;
-
-        --radius: 0.25rem;
     }
 
     body {
-        @apply bg-background font-Inter text-foreground antialiased transition-colors duration-300;
+        @apply bg-background font-Inter text-foreground antialiased;
     }
 }

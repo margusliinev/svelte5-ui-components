@@ -6,7 +6,7 @@
     let { data } = $props()
 </script>
 
-<div class="min-h-[calc(screen - 4rem)] mx-auto w-screen-90 max-w-screen-xl lg:w-screen-80">
+<div class="min-h-[calc(screen - 4rem)] mx-auto w-screen-90 max-w-screen-xl lg:w-screen-90">
     <header class="grid h-24 grid-cols-[auto_1fr] items-center">
         <div class="w-60">
             <h1 class="text-2xl font-black uppercase italic text-primary">Svelte 5 UI</h1>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </header>
-    <div class="grid items-start lg:grid-cols-[auto_1fr]">
+    <div class="mb-20 grid items-start lg:grid-cols-[auto_1fr]">
         <aside class="hidden w-60 lg:grid">
             <h4 class="mb-4 text-xs font-medium uppercase text-secondary">Components</h4>
             <ul class="flex max-w-[200px] flex-col gap-2">

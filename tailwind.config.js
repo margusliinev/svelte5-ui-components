@@ -30,33 +30,38 @@ export default {
                 'screen-10': '10vh'
             },
             colors: {
-                background: 'rgb(var(--background)/ <alpha-value>)',
-                foreground: 'rgb(var(--foreground) / <alpha-value>)',
-
+                background: {
+                    DEFAULT: 'hsl(var(--background) / <alpha-value>)',
+                    hover: 'hsl(var(--background-hover) / <alpha-value>)'
+                },
+                foreground: {
+                    DEFAULT: 'hsl(var(--foreground) / <alpha-value>)',
+                    hover: 'hsl(var(--foreground-hover) / <alpha-value>)'
+                },
                 primary: {
-                    DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
-                    foreground: 'rgb(var(--primary-foreground) / <alpha-value>)',
-                    hover: 'rgb(var(--primary-hover) / <alpha-value>)'
+                    DEFAULT: 'hsl(var(--primary) / <alpha-value>)',
+                    foreground: 'hsl(var(--primary-foreground) / <alpha-value>)',
+                    hover: 'hsl(var(--primary-hover) / <alpha-value>)'
                 },
                 secondary: {
-                    DEFAULT: 'rgb(var(--secondary)/ <alpha-value>)',
-                    foreground: 'rgb(var(--secondary-foreground)/ <alpha-value>)',
-                    hover: 'rgb(var(--secondary-hover)/ <alpha-value>)'
+                    DEFAULT: 'hsl(var(--secondary)/ <alpha-value>)',
+                    foreground: 'hsl(var(--secondary-foreground)/ <alpha-value>)',
+                    hover: 'hsl(var(--secondary-hover)/ <alpha-value>)'
                 },
                 success: {
-                    DEFAULT: 'rgb(var(--success)/ <alpha-value>)',
-                    foreground: 'rgb(var(--success-foreground)/ <alpha-value>)',
-                    hover: 'rgb(var(--success-hover)/ <alpha-value>)'
+                    DEFAULT: 'hsl(var(--success)/ <alpha-value>)',
+                    foreground: 'hsl(var(--success-foreground)/ <alpha-value>)',
+                    hover: 'hsl(var(--success-hover)/ <alpha-value>)'
                 },
                 warning: {
-                    DEFAULT: 'rgb(var(--warning) / <alpha-value>)',
-                    foreground: 'rgb(var(--warning-foreground) / <alpha-value>)',
-                    hover: 'rgb(var(--warning-hover) / <alpha-value>)'
+                    DEFAULT: 'hsl(var(--warning) / <alpha-value>)',
+                    foreground: 'hsl(var(--warning-foreground) / <alpha-value>)',
+                    hover: 'hsl(var(--warning-hover) / <alpha-value>)'
                 },
                 danger: {
-                    DEFAULT: 'rgb(var(--danger) / <alpha-value>)',
-                    foreground: 'rgb(var(--danger-foreground) / <alpha-value>)',
-                    hover: 'rgb(var(--danger-hover) / <alpha-value>)'
+                    DEFAULT: 'hsl(var(--danger) / <alpha-value>)',
+                    foreground: 'hsl(var(--danger-foreground) / <alpha-value>)',
+                    hover: 'hsl(var(--danger-hover) / <alpha-value>)'
                 },
                 input: {
                     DEFAULT: 'var(--input)',
@@ -85,6 +90,9 @@ export default {
                 '2xl': 'calc(var(--radius) + 12px)',
                 '3xl': 'calc(var(--radius) + 20px)',
                 full: '9999px'
+            },
+            animation: {
+                spin: 'spin 0.7s linear infinite'
             }
         }
     },
