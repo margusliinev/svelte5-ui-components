@@ -7,7 +7,7 @@
     interface ButtonProps extends HTMLButtonAttributes {
         children: Snippet
         color?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'
-        variant?: 'solid' | 'soft' | 'outline' | 'ghost' | 'link'
+        variant?: 'solid' | 'soft' | 'outline' | 'ghost' | 'plain'
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
         isLoading?: boolean
     }
@@ -40,20 +40,20 @@
             danger: 'bg-transparent ring-1 ring-inset ring-danger text-danger hover:bg-danger hover:text-background focus-visible:ring-offset-0'
         },
         ghost: {
-            default: 'bg-transparent text-foreground hover:bg-foreground/20 focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0',
-            primary: 'bg-transparent text-primary hover:bg-primary/20 focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0',
-            secondary: 'bg-transparent text-secondary hover:bg-secondary/20 focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0',
-            success: 'bg-transparent text-success hover:bg-success/20 focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0',
-            warning: 'bg-transparent text-warning hover:bg-warning/20 focus-visible:ring-warning focus-visible:ring-inset focus-visible:ring-offset-0',
-            danger: 'bg-transparent text-danger hover:bg-danger/20 focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0'
+            default: 'bg-transparent text-foreground hover:bg-foreground/20 focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            primary: 'bg-transparent text-primary hover:bg-primary/20 focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            secondary: 'bg-transparent text-secondary hover:bg-secondary/20 focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            success: 'bg-transparent text-success hover:bg-success/20 focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            warning: 'bg-transparent text-warning hover:bg-warning/20 focus-visible:ring-warning focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            danger: 'bg-transparent text-danger hover:bg-danger/20 focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal'
         },
-        link: {
-            default: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0',
-            primary: 'bg-transparent text-primary hover:text-primary-hover focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0',
-            secondary: 'bg-transparent text-secondary hover:text-secondary-hover focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0',
-            success: 'bg-transparent text-success hover:text-success-hover focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0',
-            warning: 'bg-transparent text-warning hover:text-warning-hover focus-visible:ring-warning focus-visible:ring-inset focus-visible:ring-offset-0',
-            danger: 'bg-transparent text-danger hover:text-danger-hover focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0'
+        plain: {
+            default: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            primary: 'bg-transparent text-primary hover:text-primary-hover focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            secondary: 'bg-transparent text-secondary hover:text-secondary-hover focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            success: 'bg-transparent text-success hover:text-success-hover focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            warning: 'bg-transparent text-warning hover:text-warning-hover focus-visible:ring-warning focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
+            danger: 'bg-transparent text-danger hover:text-danger-hover focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal'
         }
     }
 
@@ -79,14 +79,14 @@
         {#if size === 'xs' || size === 'sm'}
             {#if variant === 'outline'}
                 <ButtonSpinner size="sm" class="group-hover:text-background" />
-            {:else if variant === 'ghost' || variant === 'link'}
+            {:else if variant === 'ghost' || variant === 'plain'}
                 <ButtonSpinner size="sm" class="text-foreground" />
             {:else}
                 <ButtonSpinner size="sm" class="text-background" />
             {/if}
         {:else if variant === 'outline'}
             <ButtonSpinner size="md" class="group-hover:text-background" />
-        {:else if variant === 'ghost' || variant === 'link'}
+        {:else if variant === 'ghost' || variant === 'plain'}
             <ButtonSpinner size="md" class="text-foreground" />
         {:else}
             <ButtonSpinner size="md" class="text-background" />

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { ThemeSwitch } from '$components'
     import '../styles/fonts.css'
     import '../styles/index.css'
@@ -41,10 +41,13 @@
                     <a href="/button" class={data.route === '/button' ? 'grid h-8 w-full items-center rounded-md bg-slate-200 pl-4 text-sm' : 'grid h-8 items-center rounded-md pl-4 text-sm'}>Button</a
                     >
                 </li>
+                <li>
+                    <a href="/link" class={data.route === '/link' ? 'grid h-8 w-full items-center rounded-md bg-slate-200 pl-4 text-sm' : 'grid h-8 items-center rounded-md pl-4 text-sm'}>Link</a>
+                </li>
             </ul>
         </aside>
-        <main class="h-full w-full rounded-md border bg-background p-6 shadow-sm">
-            <h1 class="text-lg font-medium">Components / {`${data?.route?.replace('/', '')[0]?.toUpperCase()}${data?.route?.replace('/', '').slice(1)}`}</h1>
+        <main class="h-full w-full rounded-md border bg-card p-6 shadow-sm">
+            <h1 class="text-lg font-medium">Components / {`${data?.route?.replace('/', '').slice(0, 1).toUpperCase()}${data?.route?.replace('/', '').slice(1)}`}</h1>
             <slot />
         </main>
     </div>

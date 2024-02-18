@@ -29,15 +29,15 @@
         --danger-foreground: 0 0% 98%;
         --danger-hover: 0 72% 45%;
 
-        --input: #fff;
-        --input-focus: #0284c7;
-        --input-placeholder: #71717a;
-        --input-invalid: #ef4444;
+        --input: 0 0% 100%;
+        --input-focus: 200 98% 30%;
+        --input-placeholder: 240 4% 45%;
+        --input-invalid: 0 85% 60%;
 
-        --border: #d4d4d8;
-        --border-strong: #a1a1aa;
+        --border: 240 5% 85%;
+        --border-strong: 240 5% 65%;
 
-        --card: #ffffff;
+        --card: 0 0% 100%;
         --card-hover: 0 0% 98%;
 
         --radius: 0.25rem;
@@ -70,15 +70,15 @@
         --danger-hover: 0 90% 80%;
 
         --input: 240 5% 15%;
-        --input-focus: #7dd3fc;
-        --input-placeholder: #a1a1aa;
-        --input-invalid: #fca5a5;
+        --input-focus: 200 95% 60%;
+        --input-placeholder: 240 5% 65%;
+        --input-invalid: 0 93% 80%;
 
-        --border: #3f3f46;
-        --border-strong: #52525b;
+        --border: 240 5% 25%;
+        --border-strong: 240 5% 33%;
 
-        --card: #27272a;
-        --card-hover: #3f3f46;
+        --card: 240 5% 20%;
+        --card-hover: 240 5% 25%;
     }
 
     body {
