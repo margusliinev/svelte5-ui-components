@@ -4,28 +4,28 @@
 
 @layer base {
     :root {
-        --background: #fafafa;
-        --foreground: #18181b;
+        --background: 250 250 250;
+        --foreground: 24 24 27;
 
-        --primary: #0284c7;
-        --primary-foreground: #fafafa;
-        --primary-hover: #0369a1;
+        --primary: 2 132 199;
+        --primary-foreground: 250 250 250;
+        --primary-hover: 3 105 161;
 
-        --secondary: #4b5563;
-        --secondary-foreground: #fafafa;
-        --secondary-hover: #374151;
+        --secondary: 82 82 91;
+        --secondary-foreground: 250 250 250;
+        --secondary-hover: 63 63 70;
 
-        --success: #059669;
-        --success-foreground: #fafafa;
-        --success-hover: #047857;
+        --success: 5 150 105;
+        --success-foreground: 250 250 250;
+        --success-hover: 4 120 87;
 
-        --warning: #ca8a04;
-        --warning-foreground: #fafafa;
-        --warning-hover: #a16207;
+        --warning: 202 138 4;
+        --warning-foreground: 250 250 250;
+        --warning-hover: 161 98 7;
 
-        --danger: #dc2626;
-        --danger-foreground: #fafafa;
-        --danger-hover: #b91c1c;
+        --danger: 220 38 38;
+        --danger-foreground: 250 250 250;
+        --danger-hover: 185 28 28;
 
         --input: #fff;
         --input-focus: #0284c7;
@@ -36,36 +36,36 @@
         --border-strong: #a1a1aa;
 
         --card: #ffffff;
-        --card-hover: #fafafa;
+        --card-hover: 250 250 250;
 
         --radius: 0.25rem;
     }
 
     [data-theme='dark'] {
-        --background: #18181b;
-        --foreground: #fafafa;
+        --background: 24 24 27;
+        --foreground: 250 250 250;
 
-        --primary: #7dd3fc;
-        --primary-foreground: #18181b;
-        --primary-hover: #bae6fd;
+        --primary: 125 211 252;
+        --primary-foreground: 24 24 27;
+        --primary-hover: 186 230 253;
 
-        --secondary: #d4d4d8;
-        --secondary-foreground: #18181b;
-        --secondary-hover: #e4e4e7;
+        --secondary: 212 212 216;
+        --secondary-foreground: 24 24 27;
+        --secondary-hover: 228 228 231;
 
-        --success: #34d399;
-        --success-foreground: #18181b;
-        --success-hover: #6ee7b7;
+        --success: 52 211 153;
+        --success-foreground: 24 24 27;
+        --success-hover: 110 231 183;
 
-        --warning: #facc15;
-        --warning-foreground: #18181b;
-        --warning-hover: #fde047;
+        --warning: 250 204 21;
+        --warning-foreground: 24 24 27;
+        --warning-hover: 253 224 71;
 
-        --danger: #f87171;
-        --danger-foreground: #18181b;
-        --danger-hover: #fca5a5;
+        --danger: 248 113 113;
+        --danger-foreground: 24 24 27;
+        --danger-hover: 252 165 165;
 
-        --input: #18181b;
+        --input: 24 24 27;
         --input-focus: #7dd3fc;
         --input-placeholder: #a1a1aa;
         --input-invalid: #fca5a5;

@@ -16,10 +16,10 @@
 </script>
 
 <form method="post" use:enhance={submitUpdateTheme}>
-    <Button variant="none" size="none" formaction="/?/setTheme&theme=dark&redirectTo={$page.url}" class="inline-flex dark:hidden">
+    <Button variant="ghost" size="none" formaction="/?/setTheme&theme=dark&redirectTo={$page.url}" class="inline-flex dark:hidden">
         <Icon name="sun" size="sm" />
     </Button>
-    <Button variant="none" size="none" formaction="/?/setTheme&theme=light&redirectTo={$page.url}" class="hidden dark:inline-flex">
+    <Button variant="ghost" size="none" formaction="/?/setTheme&theme=light&redirectTo={$page.url}" class="hidden dark:inline-flex">
         <Icon name="moon" size="sm" />
     </Button>
 </form>

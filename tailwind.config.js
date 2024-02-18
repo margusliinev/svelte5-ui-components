@@ -30,33 +30,33 @@ export default {
                 'screen-10': '10vh'
             },
             colors: {
-                background: 'var(--background)',
-                foreground: 'var(--foreground)',
+                background: 'rgb(var(--background)/ <alpha-value>)',
+                foreground: 'rgb(var(--foreground) / <alpha-value>)',
 
                 primary: {
-                    DEFAULT: 'var(--primary)',
-                    foreground: 'var(--primary-foreground)',
-                    hover: 'var(--primary-hover)'
+                    DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
+                    foreground: 'rgb(var(--primary-foreground) / <alpha-value>)',
+                    hover: 'rgb(var(--primary-hover) / <alpha-value>)'
                 },
                 secondary: {
-                    DEFAULT: 'var(--secondary)',
-                    foreground: 'var(--secondary-foreground)',
-                    hover: 'var(--secondary-hover)'
+                    DEFAULT: 'rgb(var(--secondary)/ <alpha-value>)',
+                    foreground: 'rgb(var(--secondary-foreground)/ <alpha-value>)',
+                    hover: 'rgb(var(--secondary-hover)/ <alpha-value>)'
                 },
                 success: {
-                    DEFAULT: 'var(--success)',
-                    foreground: 'var(--success-foreground)',
-                    hover: 'var(--success-hover)'
+                    DEFAULT: 'rgb(var(--success)/ <alpha-value>)',
+                    foreground: 'rgb(var(--success-foreground)/ <alpha-value>)',
+                    hover: 'rgb(var(--success-hover)/ <alpha-value>)'
                 },
                 warning: {
-                    DEFAULT: 'var(--warning)',
-                    foreground: 'var(--warning-foreground)',
-                    hover: 'var(--warning-hover)'
+                    DEFAULT: 'rgb(var(--warning) / <alpha-value>)',
+                    foreground: 'rgb(var(--warning-foreground) / <alpha-value>)',
+                    hover: 'rgb(var(--warning-hover) / <alpha-value>)'
                 },
                 danger: {
-                    DEFAULT: 'var(--danger)',
-                    foreground: 'var(--danger-foreground)',
-                    hover: 'var(--danger-hover)'
+                    DEFAULT: 'rgb(var(--danger) / <alpha-value>)',
+                    foreground: 'rgb(var(--danger-foreground) / <alpha-value>)',
+                    hover: 'rgb(var(--danger-hover) / <alpha-value>)'
                 },
                 input: {
                     DEFAULT: 'var(--input)',
