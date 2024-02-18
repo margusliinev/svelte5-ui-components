@@ -9,7 +9,7 @@
 <div class="min-h-[calc(screen - 4rem)] mx-auto w-screen-90 max-w-screen-xl lg:w-screen-80">
     <header class="grid h-24 grid-cols-[auto_1fr] items-center">
         <div class="w-60">
-            <h1 class="text-xl font-black uppercase italic text-primary">Svelte 5 UI</h1>
+            <h1 class="text-2xl font-black uppercase italic text-primary">Svelte 5 UI</h1>
         </div>
         <div class="flex items-center justify-between">
             <nav>
@@ -43,7 +43,8 @@
                 </li>
             </ul>
         </aside>
-        <main class="rounded-lg border border-border bg-white shadow-sm">
+        <main class="h-full w-full rounded-md border bg-background p-6 shadow-sm">
+            <h1 class="text-lg font-medium">Components / {`${data?.route?.replace('/', '')[0]?.toUpperCase()}${data?.route?.replace('/', '').slice(1)}`}</h1>
             <slot />
         </main>
     </div>

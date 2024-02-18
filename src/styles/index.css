@@ -4,28 +4,28 @@
 
 @layer base {
     :root {
-        --background: #f9fafb;
-        --foreground: #111827;
+        --background: #fafafa;
+        --foreground: #18181b;
 
-        --primary: #ea580c;
-        --primary-foreground: #f9fafb;
-        --primary-hover: #c2410c;
+        --primary: #0284c7;
+        --primary-foreground: #fafafa;
+        --primary-hover: #0369a1;
 
-        --secondary: #71717a;
-        --secondary-foreground: #f9fafb;
-        --secondary-hover: #52525a;
+        --secondary: #4b5563;
+        --secondary-foreground: #fafafa;
+        --secondary-hover: #374151;
 
-        --success: #10b981;
-        --success-foreground: #f9fafb;
-        --success-hover: #059669;
+        --success: #059669;
+        --success-foreground: #fafafa;
+        --success-hover: #047857;
 
-        --warning: #eab308;
-        --warning-foreground: #f9fafb;
-        --warning-hover: #ca8a04;
+        --warning: #ca8a04;
+        --warning-foreground: #fafafa;
+        --warning-hover: #a16207;
 
-        --danger: #ef4444;
-        --danger-foreground: #f9fafb;
-        --danger-hover: #dc2626;
+        --danger: #dc2626;
+        --danger-foreground: #fafafa;
+        --danger-hover: #b91c1c;
 
         --input: #fff;
         --input-focus: #0284c7;
@@ -36,36 +36,36 @@
         --border-strong: #a1a1aa;
 
         --card: #ffffff;
-        --card-hover: #f9fafb;
+        --card-hover: #fafafa;
 
         --radius: 0.25rem;
     }
 
     [data-theme='dark'] {
-        --background: #111827;
-        --foreground: #f9fafb;
+        --background: #18181b;
+        --foreground: #fafafa;
 
         --primary: #7dd3fc;
-        --primary-foreground: #111827;
+        --primary-foreground: #18181b;
         --primary-hover: #bae6fd;
 
-        --secondary: #a1a1aa;
-        --secondary-foreground: #111827;
-        --secondary-hover: #d4d4d8;
+        --secondary: #d4d4d8;
+        --secondary-foreground: #18181b;
+        --secondary-hover: #e4e4e7;
 
         --success: #34d399;
-        --success-foreground: #111827;
+        --success-foreground: #18181b;
         --success-hover: #6ee7b7;
 
         --warning: #facc15;
-        --warning-foreground: #111827;
+        --warning-foreground: #18181b;
         --warning-hover: #fde047;
 
         --danger: #f87171;
-        --danger-foreground: #111827;
+        --danger-foreground: #18181b;
         --danger-hover: #fca5a5;
 
-        --input: #111827;
+        --input: #18181b;
         --input-focus: #7dd3fc;
         --input-placeholder: #a1a1aa;
         --input-invalid: #fca5a5;
@@ -80,6 +80,6 @@
     }
 
     body {
-        @apply bg-background font-Inter text-foreground antialiased;
+        @apply bg-background font-Inter text-foreground antialiased transition-colors duration-300;
     }
 }

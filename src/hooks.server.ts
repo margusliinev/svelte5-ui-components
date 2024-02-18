@@ -1,4 +1,5 @@
 import type { Handle } from '@sveltejs/kit'
+import { sequence } from '@sveltejs/kit/hooks'
 
 export const themeHook = (async ({ event, resolve }) => {
     let theme: string | null = null
@@ -20,3 +21,5 @@ export const themeHook = (async ({ event, resolve }) => {
 
     return await resolve(event)
 }) satisfies Handle
+
+export const handle = sequence(themeHook)
