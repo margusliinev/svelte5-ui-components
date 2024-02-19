@@ -75,8 +75,7 @@ export default {
                     strong: 'hsl(var(--border-strong) / <alpha-value>)'
                 },
                 card: {
-                    DEFAULT: 'hsl(var(--card) / <alpha-value>)',
-                    hover: 'hsl(var(--card-hover) / <alpha-value>)'
+                    DEFAULT: 'hsl(var(--card) / <alpha-value>)'
                 }
             },
             borderRadius: {

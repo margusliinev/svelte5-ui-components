@@ -4,8 +4,8 @@
 
 @layer base {
     :root {
-        --background: 0 0% 98%;
-        --background-hover: 0 0% 100%;
+        --background: 200 100% 98%;
+        --background-hover: 200 100% 100%;
         --foreground: 240 5% 15%;
         --foreground-hover: 240 10% 5%;
 
@@ -38,7 +38,6 @@
         --border-strong: 240 5% 70%;
 
         --card: 0 0% 100%;
-        --card-hover: 0 0% 98%;
 
         --radius: 0.25rem;
     }
@@ -46,7 +45,7 @@
     [data-theme='dark'] {
         --background: 240 5% 15%;
         --background-hover: 240 10% 5%;
-        --foreground: 0 0% 98%;
+        --foreground: 0 0% 95%;
         --foreground-hover: 0 0% 100%;
 
         --primary: 200 95% 80%;
@@ -78,7 +77,6 @@
         --border-strong: 240 5% 35%;
 
         --card: 240 5% 20%;
-        --card-hover: 240 5% 25%;
     }
 
     body {

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Icon, Link } from '$components'
+    import { Button, Icon, Link } from '$components'
     import { SidebarLinks } from '.'
 
     interface MobileSidebarProps {
@@ -11,24 +11,15 @@
     let { route, open, toggleSidebar } = $props<MobileSidebarProps>()
 </script>
 
-<div class={open ? 'fixed inset-0 z-50 bg-gray-900/80 transition-opacity duration-500 lg:hidden' : 'fixed inset-0 -z-50 -ml-96 opacity-0 transition-opacity duration-500 lg:hidden'}></div>
-<aside
-    class={open
-        ? 'min-h-sreen fixed inset-0 z-50 ml-0 flex w-64 flex-col bg-background-hover shadow-xl transition-all duration-300 lg:hidden'
-        : 'fixed inset-0 z-50 -ml-96 min-h-screen w-64 bg-background-hover transition-all duration-300 xl:hidden'}
->
-    <button
-        type="button"
-        onclick={toggleSidebar}
-        aria-label="close menu"
-        class={open ? 'absolute -right-8 top-5 text-white opacity-100 transition-opacity duration-500' : 'absolute -right-8 top-5 text-white opacity-0 transition-opacity duration-500'}
-    >
-        <Icon name="close" />
-    </button>
-    <div class="grid h-24 self-start px-8">
-        <Link href="/" size="icon" class="text-2xl font-black uppercase italic text-primary">Svelte 5 UI</Link>
+<div class={`fixed inset-0 bg-slate-900/80 transition-opacity duration-500 dark:bg-zinc-900/80 lg:hidden ${open ? 'z-50 opacity-100' : '-z-50 opacity-0'}`}></div>
+<aside class={`fixed inset-0 z-50 w-64 bg-background transition-all duration-500 lg:hidden ${open ? 'ml-0' : '-ml-96'}`}>
+    <Button size="icon" variant="plain" onclick={toggleSidebar} aria-label="close sidebar" class="absolute -right-8 top-9">
+        <Icon name="close" stroke="white" />
+    </Button>
+    <div class="flex h-24 px-8">
+        <Link href="/" size="icon" class="text-2xl font-black uppercase text-primary">Svelte 5 UI</Link>
     </div>
-    <div class="justify-self-start px-8">
+    <div class="px-8">
         <SidebarLinks {route} {toggleSidebar} />
     </div>
 </aside>

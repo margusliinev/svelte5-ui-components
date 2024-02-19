@@ -9,6 +9,6 @@
     let { route, toggleSidebar } = $props<DesktopSidebarProps>()
 </script>
 
-<aside class="hidden w-60 lg:grid">
+<aside class="hidden w-60 lg:block">
     <SidebarLinks {route} {toggleSidebar} />
 </aside>
