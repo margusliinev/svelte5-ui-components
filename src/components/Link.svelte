@@ -12,7 +12,7 @@
     let { children, color, class: className, ...props } = $props<LinkProps>()
 
     let linkVariants = {
-        default: 'focus-visible:ring-foreground hover:text-foreground-hover',
+        default: 'focus-visible:ring-foreground',
         primary: 'bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary dark:font-medium',
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-secondary dark:font-medium'
     }
