@@ -1,0 +1,19 @@
+<script lang="ts">
+    import { Link } from '$components'
+
+    interface SidebarLinksProps {
+        route: string | null
+        toggleSidebar: () => void
+    }
+
+    let { route, toggleSidebar } = $props<SidebarLinksProps>()
+</script>
+
+<ul class="flex max-w-[200px] flex-col gap-2">
+    <h4 class="mb-4 text-xs font-medium uppercase text-secondary">Components</h4>
+    <li><Link href="/home/alert" size="sm" class={`flex items-center justify-start ${route === '/home/alert' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Alert</Link></li>
+    <li>
+        <Link href="/home/button" size="sm" class={`flex items-center justify-start ${route === '/home/button' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Button</Link>
+    </li>
+    <li><Link href="/home/link" size="sm" class={`flex items-center justify-start ${route === '/home/link' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Link</Link></li>
+</ul>

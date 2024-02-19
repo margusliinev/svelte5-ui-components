@@ -64,19 +64,19 @@ export default {
                     hover: 'hsl(var(--danger-hover) / <alpha-value>)'
                 },
                 input: {
-                    DEFAULT: 'var(--input)',
-                    border: 'var(--input-border)',
-                    focus: 'var(--input-focus)',
-                    placeholder: 'var(--input-placeholder)',
-                    invalid: 'var(--input-invalid)'
+                    DEFAULT: 'hsl(var(--input) / <alpha-value>)',
+                    border: 'hsl(var(--input-border) / <alpha-value>)',
+                    focus: 'hsl(var(--input-focus) / <alpha-value>)',
+                    placeholder: 'hsl(var(--input-placeholder) / <alpha-value>)',
+                    invalid: 'hsl(var(--input-invalid) / <alpha-value>)'
                 },
                 border: {
-                    DEFAULT: 'var(--border)',
-                    strong: 'var(--border-strong)'
+                    DEFAULT: 'hsl(var(--border) / <alpha-value>)',
+                    strong: 'hsl(var(--border-strong) / <alpha-value>)'
                 },
                 card: {
-                    DEFAULT: 'var(--card)',
-                    hover: 'var(--card-hover)'
+                    DEFAULT: 'hsl(var(--card) / <alpha-value>)',
+                    hover: 'hsl(var(--card-hover) / <alpha-value>)'
                 }
             },
             borderRadius: {
