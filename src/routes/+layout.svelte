@@ -3,7 +3,7 @@
     import '../styles/index.css'
     import { Button, Icon, Link, ThemeSwitch } from '$components'
     import { DesktopSidebar, MobileSidebar } from '$layout'
-    let { data } = $props()
+    let { data, children } = $props()
 
     let open = $state(false)
 
@@ -29,11 +29,20 @@
             <Icon name="menu" />
         </Button>
     </header>
-    <div class="mb-20 grid items-start lg:grid-cols-[auto_1fr]">
-        {#if data.route !== '/examples'}
+    {#if data.route !== '/examples'}
+        <div class="mb-20 grid items-start lg:grid-cols-[auto_1fr]">
             <DesktopSidebar route={data.route} {toggleSidebar} />
-        {/if}
-        <MobileSidebar route={data.route} {open} {toggleSidebar} />
-        <slot />
-    </div>
+            <MobileSidebar route={data.route} {open} {toggleSidebar} />
+            <main class="h-full w-full rounded-md border border-border bg-card p-6 shadow-sm">
+                {@render children()}
+            </main>
+        </div>
+    {:else}
+        <div class="mb-20">
+            <MobileSidebar route={data.route} {open} {toggleSidebar} />
+            <main class="h-full w-full rounded-md border border-border bg-card p-6 shadow-sm">
+                {@render children()}
+            </main>
+        </div>
+    {/if}
 </div>
