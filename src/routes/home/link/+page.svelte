@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Link, Icon } from '$components'
+    import { Link } from '$components'
     let colors = ['default', 'primary', 'secondary'] as const
     let sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const
 </script>
