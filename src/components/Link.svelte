@@ -5,11 +5,11 @@
 
     interface LinkProps extends HTMLAnchorAttributes {
         children: Snippet
-        color?: 'default' | 'primary' | 'secondary'
+        variant?: 'default' | 'primary' | 'secondary'
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
     }
 
-    let { children, color, class: className, ...props } = $props<LinkProps>()
+    let { children, variant, class: className, ...props } = $props<LinkProps>()
 
     let linkVariants = {
         default: 'focus-visible:ring-foreground',
@@ -28,7 +28,7 @@
 
     let linkCore =
         'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none group'
-    let linkVarient = linkVariants[color ?? 'default']
+    let linkVarient = linkVariants[variant ?? 'default']
     let linkSize = linkSizes[props.size ?? 'md']
     let linkStyles = twJoin(linkCore, linkVarient, linkSize)
 </script>

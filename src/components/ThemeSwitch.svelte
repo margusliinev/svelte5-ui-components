@@ -15,10 +15,10 @@
 </script>
 
 <Form method="post" submitFunction={submitUpdateTheme}>
-    <Button variant="plain" size="icon" formaction="/?/setTheme&theme=dark&redirectTo={$page.url}" class="inline-flex dark:hidden">
+    <Button style="plain" size="icon" formaction="/?/setTheme&theme=dark&redirectTo={$page.url}" class="inline-flex dark:hidden">
         <Icon name="sun" size="sm" />
     </Button>
-    <Button variant="plain" size="icon" formaction="/?/setTheme&theme=light&redirectTo={$page.url}" class="hidden dark:inline-flex">
+    <Button style="plain" size="icon" formaction="/?/setTheme&theme=light&redirectTo={$page.url}" class="hidden dark:inline-flex">
         <Icon name="moon" size="sm" />
     </Button>
 </Form>

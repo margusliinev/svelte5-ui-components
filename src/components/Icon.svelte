@@ -27,4 +27,4 @@
     let iconStrokeWidth = strokeWidth ?? '2'
 </script>
 
-{@html icons[name]?.replace('<svg', `<svg height=${iconSize} width=${iconSize} fill=${iconFill} stroke=${iconStroke} stroke-width=${iconStrokeWidth}  class='shrink-0' focusable="false"`)}
+{@html icons[name]?.replace('<svg', `<svg height=${iconSize} width=${iconSize} fill=${iconFill} stroke=${iconStroke} stroke-width=${iconStrokeWidth} class='antialiased' focusable="false"`)}

@@ -6,13 +6,13 @@
 
     interface ButtonProps extends HTMLButtonAttributes {
         children: Snippet
-        color?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'
-        variant?: 'solid' | 'soft' | 'outline' | 'ghost' | 'plain'
+        variant?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'
+        style?: 'solid' | 'soft' | 'outline' | 'ghost' | 'plain'
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
         isLoading?: boolean
     }
 
-    let { children, color, variant, size, isLoading, class: className, ...props } = $props<ButtonProps>()
+    let { children, variant, style, size, isLoading, class: className, ...props } = $props<ButtonProps>()
 
     let buttonVariants = {
         solid: {
@@ -68,25 +68,24 @@
 
     let buttonCore =
         'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none dark:font-medium group'
-    let buttonVariant = buttonVariants[variant ?? 'solid']
+    let buttonVariant = buttonVariants[style ?? 'solid']
     let buttonSize = buttonSizes[size ?? 'md']
-
-    let buttonStyles = twMerge(buttonCore, buttonVariant[color ?? 'default'], buttonSize)
+    let buttonStyles = twMerge(buttonCore, buttonVariant[variant ?? 'default'], buttonSize)
 </script>
 
 <button {...props} class={twMerge(buttonStyles, className)}>
     {#if isLoading}
         {#if size === 'xs' || size === 'sm'}
-            {#if variant === 'outline'}
+            {#if style === 'outline'}
                 <ButtonSpinner size="sm" class="group-hover:text-background" />
-            {:else if variant === 'ghost' || variant === 'plain'}
+            {:else if style === 'ghost' || style === 'plain'}
                 <ButtonSpinner size="sm" class="text-foreground" />
             {:else}
                 <ButtonSpinner size="sm" class="text-background" />
             {/if}
-        {:else if variant === 'outline'}
+        {:else if style === 'outline'}
             <ButtonSpinner size="md" class="group-hover:text-background" />
-        {:else if variant === 'ghost' || variant === 'plain'}
+        {:else if style === 'ghost' || style === 'plain'}
             <ButtonSpinner size="md" class="text-foreground" />
         {:else}
             <ButtonSpinner size="md" class="text-background" />

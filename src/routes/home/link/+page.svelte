@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Link } from '$components'
-    let colors = ['default', 'primary', 'secondary'] as const
+    let variants = ['default', 'primary', 'secondary'] as const
     let sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const
 </script>
 
@@ -8,8 +8,8 @@
     {#each sizes as size, i}
         <div class="flex flex-col gap-4">
             <h2 class="font-medium">Size: <span class="uppercase">{`${sizes[i]}`}</span></h2>
-            {#each colors as color}
-                <Link href="#" {color} {size}>{color} link</Link>
+            {#each variants as variant}
+                <Link href="#" {variant} {size}>{variant} link</Link>
             {/each}
         </div>
     {/each}

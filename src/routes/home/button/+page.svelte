@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Button, Icon } from '$components'
-    let colors = ['default', 'primary', 'secondary', 'success', 'warning', 'danger'] as const
-    let variants = ['solid', 'soft', 'outline', 'ghost'] as const
+    let variants = ['default', 'primary', 'secondary', 'success', 'warning', 'danger'] as const
+    let styles = ['solid', 'soft', 'outline', 'ghost'] as const
     let sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const
 </script>
 
@@ -10,9 +10,9 @@
         <div class="flex flex-col gap-4">
             <h2 class="font-medium">Size: <span class="uppercase">{`${sizes[i]}`}</span></h2>
 
-            {#each colors as color}
-                {#each variants as variant}
-                    <Button {color} {variant} {size}>{color} {variant}</Button>
+            {#each variants as variant}
+                {#each styles as style}
+                    <Button {variant} {style} {size}>{variant} {style}</Button>
                 {/each}
             {/each}
 

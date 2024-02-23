@@ -29,6 +29,10 @@
         --danger-foreground: 0 0% 98%;
         --danger-hover: 0 72% 45%;
 
+        --info: 200 95% 40%;
+        --info-foreground: 0 0% 98%;
+        --info-hover: 200 95% 50%;
+
         --input: 0 0% 100%;
         --input-focus: 200 98% 30%;
         --input-placeholder: 240 4% 45%;
@@ -67,6 +71,10 @@
         --danger: 0 90% 70%;
         --danger-foreground: 240 5% 15%;
         --danger-hover: 0 90% 80%;
+
+        --info: 200 90% 70%;
+        --info-foreground: 240 5% 15%;
+        --info-hover: 200 90% 80%;
 
         --input: 240 5% 15%;
         --input-focus: 200 95% 60%;

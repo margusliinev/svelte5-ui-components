@@ -63,6 +63,11 @@ export default {
                     foreground: 'hsl(var(--danger-foreground) / <alpha-value>)',
                     hover: 'hsl(var(--danger-hover) / <alpha-value>)'
                 },
+                info: {
+                    DEFAULT: 'hsl(var(--info) / <alpha-value>)',
+                    foreground: 'hsl(var(--info-foreground) / <alpha-value>)',
+                    hover: 'hsl(var(--info-hover) / <alpha-value>)'
+                },
                 input: {
                     DEFAULT: 'hsl(var(--input) / <alpha-value>)',
                     border: 'hsl(var(--input-border) / <alpha-value>)',
