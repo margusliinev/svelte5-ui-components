@@ -5,5 +5,6 @@ import Icon from './Icon.svelte'
 import Link from './Link.svelte'
 import Alert from './Alert.svelte'
 import Form from './Form.svelte'
+import Label from './Label.svelte'
 
-export { Button, ButtonSpinner, ThemeSwitch, Icon, Link, Alert, Form }
+export { Button, ButtonSpinner, ThemeSwitch, Icon, Link, Alert, Form, Label }
