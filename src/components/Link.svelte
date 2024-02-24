@@ -12,7 +12,7 @@
     let { children, variant, class: className, ...props } = $props<LinkProps>()
 
     let linkVariants = {
-        default: 'focus-visible:ring-foreground',
+        default: 'focus-visible:ring-foreground focus-visible:ring-offset-0',
         primary: 'bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary dark:font-medium',
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-secondary dark:font-medium'
     }
@@ -30,7 +30,7 @@
         'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none group'
     let linkVarient = linkVariants[variant ?? 'default']
     let linkSize = linkSizes[props.size ?? 'md']
-    let linkStyles = twJoin(linkCore, linkVarient, linkSize)
+    let linkStyles = twMerge(linkCore, linkVarient, linkSize)
 </script>
 
 <a {...props} class={twMerge(linkStyles, className)}>{@render children()}</a>

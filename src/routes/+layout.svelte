@@ -1,7 +1,7 @@
 <script lang="ts">
     import '../styles/fonts.css'
     import '../styles/index.css'
-    import { Button, Icon, Link, ThemeSwitch } from '$components'
+    import { Button, Card, Icon, Link, ThemeSwitch } from '$components'
     import { DesktopSidebar, MobileSidebar } from '$layout'
     let { data, children } = $props()
 
@@ -33,15 +33,15 @@
         <div class="mb-20 grid items-start lg:grid-cols-[auto_1fr]">
             <DesktopSidebar route={data.route} {toggleSidebar} />
             <MobileSidebar route={data.route} {open} {toggleSidebar} />
-            <main class="h-full w-full rounded-md border border-border bg-card p-6 shadow-sm">
-                {@render children()}
+            <main>
+                <Card>{@render children()}</Card>
             </main>
         </div>
     {:else}
         <div class="mb-20">
             <MobileSidebar route={data.route} {open} {toggleSidebar} />
-            <main class="h-full w-full rounded-md border border-border bg-card p-6 shadow-sm">
-                {@render children()}
+            <main>
+                <Card>{@render children()}</Card>
             </main>
         </div>
     {/if}
