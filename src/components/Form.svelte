@@ -15,4 +15,4 @@
     let formCore = 'grid'
 </script>
 
-<form {...props} use:enhance={submitFunction} class={twMerge(formCore, className)}>{@render children()}</form>
+<form {...props} method="POST" use:enhance={submitFunction} class={twMerge(formCore, className)}>{@render children()}</form>
