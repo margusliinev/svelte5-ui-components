@@ -21,7 +21,7 @@
             <nav class="flex items-center gap-2">
                 <Link href="/home" size="sm" class={`${data.route?.split('/')[1] === 'home' ? 'bg-primary/20' : ''}`}>Home</Link>
                 <Link href="/examples" size="sm" class={`${data.route?.split('/')[1] === 'examples' ? 'bg-primary/20' : ''}`}>Examples</Link>
-                <Link href="https://github.com/margusliinev/svelte5-ui-components" size="sm" target="_blank" class={`${data.route?.split('/')[1] === 'github' ? 'bg-primary/20' : ''}`}>GitHub</Link>
+                <Link href="https://github.com/margusliinev/svelte5-ui-components" size="sm" target="_blank">GitHub</Link>
             </nav>
             <ThemeSwitch />
         </div>
