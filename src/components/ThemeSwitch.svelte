@@ -14,11 +14,11 @@
     }
 </script>
 
-<Form method="post" submitFunction={submitUpdateTheme}>
-    <Button style="plain" size="icon" formaction="/?/setTheme&theme=dark&redirectTo={$page.url}" class="inline-flex dark:hidden">
+<Form submitFunction={submitUpdateTheme}>
+    <Button style="plain" size="icon" formaction="/?/setTheme&theme=dark&redirectTo={$page.url}" class="inline-flex dark:hidden" aria-label="Theme Switch">
         <Icon name="sun" size="sm" />
     </Button>
-    <Button style="plain" size="icon" formaction="/?/setTheme&theme=light&redirectTo={$page.url}" class="hidden dark:inline-flex">
+    <Button style="plain" size="icon" formaction="/?/setTheme&theme=light&redirectTo={$page.url}" class="hidden dark:inline-flex" aria-label="Theme Switch">
         <Icon name="moon" size="sm" />
     </Button>
 </Form>
