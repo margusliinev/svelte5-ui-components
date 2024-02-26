@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { HTMLAnchorAttributes } from 'svelte/elements'
     import type { Snippet } from 'svelte'
-    import { twJoin, twMerge } from 'tailwind-merge'
+    import { twMerge } from 'tailwind-merge'
 
     interface LinkProps extends HTMLAnchorAttributes {
         children: Snippet
