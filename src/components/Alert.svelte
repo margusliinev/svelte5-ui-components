@@ -12,14 +12,14 @@
 
     let { children, variant, title, class: className, ...props } = $props<AlertProps>()
 
-    let alertVariant = {
+    let alertVariants = {
         success: 'border-success/30 text-success bg-success/10',
         warning: 'border-warning/30 text-warning bg-warning/10',
         danger: 'border-danger/30 text-danger bg-danger/10',
         info: 'border-info/30 text-info bg-info/10'
     }
     let alertCore = 'text-sm w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg]:absolute'
-    let alertStyles = twJoin(alertCore, alertVariant[variant ?? 'danger'])
+    let alertStyles = twJoin(alertCore, alertVariants[variant ?? 'danger'])
 </script>
 
 <div {...props} role="alert" class={twMerge(alertStyles, className)}>
