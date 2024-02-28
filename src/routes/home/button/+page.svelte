@@ -20,13 +20,13 @@
             <Button color="secondary" {size} isLoading>Loading</Button>
 
             {#if size === 'xs'}
-                <Button color="secondary" size="xs"><Icon name="external-link" size="xs" />With Icon</Button>
+                <Button color="secondary" size="xs"><Icon name="link" size="xs" />With Icon</Button>
             {/if}
             {#if size === 'sm' || size === 'md' || size === 'lg'}
-                <Button color="secondary" size="sm"><Icon name="external-link" size="sm" />With Icon</Button>
+                <Button color="secondary" size="sm"><Icon name="link" size="sm" />With Icon</Button>
             {/if}
             {#if size === 'xl'}
-                <Button color="secondary" size="xl"><Icon name="external-link" size="md" />With Icon</Button>
+                <Button color="secondary" size="xl"><Icon name="link" size="md" />With Icon</Button>
             {/if}
 
             <Button color="secondary" {size} class="w-fit"><Icon name="copy" {size} /></Button>

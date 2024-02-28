@@ -1,7 +1,7 @@
 <script lang="ts">
     /* eslint-disable */
     import type { SVGAttributes } from 'svelte/elements'
-    import icons from './icons/generate'
+    import icons from '../icons'
 
     interface IconProps extends SVGAttributes<SVGElement> {
         name: string

@@ -15,6 +15,7 @@
     <li><Link href="/home/badge" size="sm" class={`flex items-center justify-start ${route === '/home/badge' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Badge</Link></li>
     <li><Link href="/home/button" size="sm" class={`flex items-center justify-start ${route === '/home/button' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Button</Link></li>
     <li><Link href="/home/card" size="sm" class={`flex items-center justify-start ${route === '/home/card' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Card</Link></li>
+    <li><Link href="/home/dropdown" size="sm" class={`flex items-center justify-start ${route === '/home/dropdown' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Dropdown</Link></li>
     <li><Link href="/home/link" size="sm" class={`flex items-center justify-start ${route === '/home/link' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Link</Link></li>
     <h4 class="my-4 text-xs font-medium uppercase text-secondary">Forms</h4>
     <li><Link href="/home/form" size="sm" class={`flex items-center justify-start ${route === '/home/form' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Form</Link></li>
