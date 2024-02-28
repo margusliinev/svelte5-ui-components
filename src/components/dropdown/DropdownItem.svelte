@@ -3,7 +3,6 @@
     import type { DropdownState } from './DropdownState.svelte'
     import type { Snippet } from 'svelte'
     import { getContext } from 'svelte'
-    import { twMerge } from 'tailwind-merge'
 
     interface DropdownItemProps extends HTMLAttributes<HTMLDivElement> {
         children: Snippet

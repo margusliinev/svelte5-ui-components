@@ -4,7 +4,7 @@
 </script>
 
 <div class="flex flex-wrap items-center gap-4">
-    {#each variants as variant, i}
+    {#each variants as variant}
         <Badge {variant}>{variant}</Badge>
     {/each}
 </div>

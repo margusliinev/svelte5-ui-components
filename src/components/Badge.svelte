@@ -8,7 +8,7 @@
         variant: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'
     }
 
-    let { children, variant, title, class: className, ...props } = $props<BadgeProps>()
+    let { children, variant, class: className, ...props } = $props<BadgeProps>()
 
     let badgeVariants = {
         default: 'bg-foreground hover:bg-foreground-hover text-background',

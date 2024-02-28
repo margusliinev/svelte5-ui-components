@@ -15,7 +15,7 @@
     let { children, icon, ...props } = $props<DropdownButtonProps>()
 </script>
 
-<Button {...props} style="plain" aria-haspopup="menu" aria-expanded={dropdown.open} onclick={dropdown.handleClick} onkeydown={dropdown.handleKeyDown} onblur={dropdown.handleOutsideClick}>
+<Button {...props} style="plain" aria-haspopup="menu" aria-expanded={dropdown.open} onclick={dropdown.handleClick} onkeydown={dropdown.handleKeyDown} onblur={dropdown.handleBlur}>
     {@render children()}
     {#if icon}
         {#if dropdown.open}

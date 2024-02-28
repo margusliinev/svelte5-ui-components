@@ -1,9 +1,8 @@
 export type DropdownState = {
     open: boolean
     handleClick?: () => void
-    handleEscape?: (event: KeyboardEvent) => void
     handleKeyDown?: (event: KeyboardEvent) => void
-    handleOutsideClick?: (event: FocusEvent) => void
+    handleBlur?: (event: FocusEvent) => void
     focusOnLastChild?: (element: HTMLElement | null) => void
     isMenuitem?: (element: HTMLElement | null) => boolean
 }
@@ -18,15 +17,13 @@ export class CreateDropdownState {
     handleClick = () => {
         this.open = !this.open
     }
-    handleEscape = (event: KeyboardEvent) => {
-        const key = event.key
-        if (this.open && key === 'Escape') this.open = false
-    }
-    handleOutsideClick = (event: FocusEvent) => {
+    handleBlur = (event: FocusEvent) => {
         const element = event?.relatedTarget as HTMLElement
         if (this.open && !element?.closest('[role="menu"]')) this.open = false
     }
     handleKeyDown = (e: KeyboardEvent) => {
+        if (this.open && e.key === 'Escape') this.open = false
+
         const element = e.currentTarget as HTMLElement
         const parentElement = element?.parentElement as HTMLElement
         const nextElement = element?.nextElementSibling as HTMLElement
