@@ -12,7 +12,7 @@
 
     const dropdown = getContext<DropdownState>('dropdown')
 
-    let dropdownMenuStyles = 'absolute top-12 right-0 bg-background ring-1 ring-border ring-inset rounded-md z-50 overflow-hidden'
+    let dropdownMenuStyles = 'grid absolute top-12 right-0 bg-background ring-1 ring-border ring-inset rounded-md z-50 hover:overflow-hidden w-max'
 
     let { children, class: className, ...props } = $props<DropdownMenuProps>()
 </script>

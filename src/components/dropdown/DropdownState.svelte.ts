@@ -33,14 +33,16 @@ export class CreateDropdownState {
 
         const isArrowUp = e.key === 'ArrowUp'
         const isArrowDown = e.key === 'ArrowDown'
+        const isArrowLeft = e.key === 'ArrowLeft'
+        const isArrowRight = e.key === 'ArrowRight'
 
-        if (isArrowUp) {
+        if (isArrowUp || isArrowLeft) {
             if (this.isMenuitem(previousElement)) {
                 this.focusOnLastChild(previousElement)
             } else if (parentElementSibling?.getAttribute('aria-haspopup') === 'menu') {
                 parentElementSibling?.focus()
             }
-        } else if (isArrowDown) {
+        } else if (isArrowDown || isArrowRight) {
             if (this.isMenuitem(nextElement)) {
                 this.focusOnLastChild(nextElement)
             } else if (this.isMenuitem(nextElementChild)) {
