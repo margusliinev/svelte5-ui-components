@@ -12,11 +12,11 @@
 
             {#each variants as variant}
                 {#each styles as style}
-                    <Button {variant} {style} {size}>{variant} {style}</Button>
+                    <Button {variant} {style} {size} class="capitalize">{variant} {style}</Button>
                 {/each}
             {/each}
 
-            <Button color="secondary" {size} disabled>disabled</Button>
+            <Button color="secondary" {size} disabled>Disabled</Button>
             <Button color="secondary" {size} isLoading>Loading</Button>
 
             {#if size === 'xs'}

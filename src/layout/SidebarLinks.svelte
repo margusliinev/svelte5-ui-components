@@ -19,4 +19,5 @@
     <li><Link href="/home/link" size="sm" class={`flex items-center justify-start ${route === '/home/link' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Link</Link></li>
     <h4 class="my-4 text-xs font-medium uppercase text-secondary">Forms</h4>
     <li><Link href="/home/form" size="sm" class={`flex items-center justify-start ${route === '/home/form' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>Form</Link></li>
+    <li><Link href="/home/formfield" size="sm" class={`flex items-center justify-start ${route === '/home/formfield' ? 'bg-secondary/20' : ''}`} onclick={toggleSidebar}>FormField</Link></li>
 </ul>

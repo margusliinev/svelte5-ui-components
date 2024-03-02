@@ -40,20 +40,20 @@
             danger: 'bg-transparent ring-1 ring-inset ring-danger text-danger hover:bg-danger hover:text-background focus-visible:ring-offset-0'
         },
         ghost: {
-            default: 'bg-transparent text-foreground hover:bg-foreground/20 focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            primary: 'bg-transparent text-primary hover:bg-primary/20 focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            secondary: 'bg-transparent text-secondary hover:bg-secondary/20 focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            success: 'bg-transparent text-success hover:bg-success/20 focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            warning: 'bg-transparent text-warning hover:bg-warning/20 focus-visible:ring-warning focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            danger: 'bg-transparent text-danger hover:bg-danger/20 focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal'
+            default: 'bg-transparent text-foreground hover:bg-foreground/20 focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0',
+            primary: 'bg-transparent text-primary hover:bg-primary/20 focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0',
+            secondary: 'bg-transparent text-secondary hover:bg-secondary/20 focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0',
+            success: 'bg-transparent text-success hover:bg-success/20 focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0',
+            warning: 'bg-transparent text-warning hover:bg-warning/20 focus-visible:ring-warning focus-visible:ring-inset focus-visible:ring-offset-0',
+            danger: 'bg-transparent text-danger hover:bg-danger/20 focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0'
         },
         plain: {
-            default: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            primary: 'bg-transparent text-primary hover:text-primary-hover focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            secondary: 'bg-transparent text-secondary hover:text-secondary-hover focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            success: 'bg-transparent text-success hover:text-success-hover focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            warning: 'bg-transparent text-warning hover:text-warning-hover focus-visible:ring-warning focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal',
-            danger: 'bg-transparent text-danger hover:text-danger-hover focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0 dark:font-normal'
+            default: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset font-normal',
+            primary: 'bg-transparent text-primary hover:text-primary-hover focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
+            secondary: 'bg-transparent text-secondary hover:text-secondary-hover focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
+            success: 'bg-transparent text-success hover:text-success-hover focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
+            warning: 'bg-transparent text-warning hover:text-warning-hover focus-visible:ring-warning focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
+            danger: 'bg-transparent text-danger hover:text-danger-hover focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0 font-normal'
         }
     }
 
@@ -67,7 +67,7 @@
     }
 
     let buttonCore =
-        'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none dark:font-medium group'
+        'inline-flex items-center justify-center gap-1 rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none font-medium group'
     let buttonVariant = buttonVariants[style ?? 'solid']
     let buttonSize = buttonSizes[size ?? 'md']
     let buttonStyles = twMerge(buttonCore, buttonVariant[variant ?? 'default'], buttonSize)

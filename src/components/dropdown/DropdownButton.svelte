@@ -16,7 +16,7 @@
     let { children, icon, class: className, ...props } = $props<DropdownButtonProps>()
 
     let dropdownButtonStyles =
-        'focus-visible:ring-foreground focus-visible:ring-offset-0 transition-none inline-flex items-center justify-center gap-1 capitalize rounded-md focus-visible:outline-none focus-visible:ring-2 h-10 px-5 text-sm ring-1 ring-border ring-inset bg-background'
+        'focus-visible:ring-foreground focus-visible:ring-offset-0 transition-none inline-flex items-center justify-center gap-1 capitalize rounded-md focus-visible:outline-none focus-visible:ring-2 h-10 px-5 text-sm ring-1 ring-border ring-inset bg-background font-medium'
 </script>
 
 <button

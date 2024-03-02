@@ -12,9 +12,9 @@
     let { children, variant, class: className, ...props } = $props<LinkProps>()
 
     let linkVariants = {
-        default: 'focus-visible:ring-foreground focus-visible:ring-offset-0',
-        primary: 'bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary dark:font-medium',
-        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-secondary dark:font-medium'
+        default: 'focus-visible:ring-foreground focus-visible:ring-offset-0 focus-visible:ring-inset font-normal',
+        primary: 'bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary',
+        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-secondary'
     }
 
     let linkSizes = {
@@ -27,7 +27,7 @@
     }
 
     let linkCore =
-        'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none group'
+        'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none group'
     let linkVarient = linkVariants[variant ?? 'default']
     let linkSize = linkSizes[props.size ?? 'md']
     let linkStyles = twMerge(linkCore, linkVarient, linkSize)
