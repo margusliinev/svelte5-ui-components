@@ -2,8 +2,8 @@
     import type { HTMLFormAttributes } from 'svelte/elements'
     import type { SubmitFunction } from '@sveltejs/kit'
     import type { Snippet } from 'svelte'
-    import { enhance } from '$app/forms'
     import { twMerge } from 'tailwind-merge'
+    import { enhance } from '$app/forms'
 
     interface FormProps extends HTMLFormAttributes {
         children: Snippet

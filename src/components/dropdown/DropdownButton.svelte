@@ -2,9 +2,9 @@
     import type { HTMLButtonAttributes } from 'svelte/elements'
     import type { DropdownState } from './DropdownState.svelte'
     import type { Snippet } from 'svelte'
-    import { Button, Icon } from '$components'
-    import { twMerge } from 'tailwind-merge'
     import { getContext } from 'svelte'
+    import { twMerge } from 'tailwind-merge'
+    import { Icon } from '$components'
 
     interface DropdownButtonProps extends HTMLButtonAttributes {
         children: Snippet

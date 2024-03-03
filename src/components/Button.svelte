@@ -1,8 +1,8 @@
 <script lang="ts">
     import type { HTMLButtonAttributes } from 'svelte/elements'
     import type { Snippet } from 'svelte'
-    import { twMerge } from 'tailwind-merge'
     import { ButtonSpinner } from '$components'
+    import { twMerge } from 'tailwind-merge'
 
     interface ButtonProps extends HTMLButtonAttributes {
         children: Snippet
@@ -48,7 +48,7 @@
             danger: 'bg-transparent text-danger hover:bg-danger/20 focus-visible:ring-danger focus-visible:ring-inset focus-visible:ring-offset-0'
         },
         plain: {
-            default: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset font-normal',
+            default: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
             primary: 'bg-transparent text-primary hover:text-primary-hover focus-visible:ring-primary focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
             secondary: 'bg-transparent text-secondary hover:text-secondary-hover focus-visible:ring-secondary focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
             success: 'bg-transparent text-success hover:text-success-hover focus-visible:ring-success focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
