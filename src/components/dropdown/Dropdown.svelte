@@ -1,0 +1,21 @@
+<script lang="ts">
+    import type { HTMLAttributes } from 'svelte/elements';
+    import type { Snippet } from 'svelte';
+    import type { DropdownState } from './DropdownState.svelte';
+    import { CreateDropdownState } from './DropdownState.svelte';
+    import { setContext } from 'svelte';
+    import { twMerge } from 'tailwind-merge';
+
+    interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
+        children: Snippet;
+    }
+
+    const dropdown = new CreateDropdownState({ open: false });
+    setContext<DropdownState>('dropdown', dropdown);
+
+    let { children, class: className, ...props }: DropdownProps = $props();
+
+    let dropdownStyles = 'relative';
+</script>
+
+<div {...props} class={twMerge(dropdownStyles, className)}>{@render children()}</div>
