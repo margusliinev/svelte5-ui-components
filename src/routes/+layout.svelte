@@ -4,7 +4,6 @@
     import { Button, Card, Icon, Link, ThemeSwitch } from '$components';
     import { DesktopSidebar, MobileSidebar } from '$layout';
     let { data, children } = $props();
-    console.log(data.route);
 
     let open = $state(false);
 
