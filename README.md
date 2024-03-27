@@ -6,10 +6,10 @@ This is a repository for custom Svelte 5 UI components that you can copy paste i
 
 ## Technologies
 
--   Svelte 5
--   Typescript
--   TailwindCSS
--   Tailwind Merge
+- Svelte 5
+- Typescript
+- TailwindCSS
+- Tailwind Merge
 
 ## Built Components
 
