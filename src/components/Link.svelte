@@ -1,36 +1,34 @@
 <script lang="ts">
-    import type { Snippet } from 'svelte';
     import type { HTMLAnchorAttributes } from 'svelte/elements';
+    import type { Snippet } from 'svelte';
     import { twMerge } from 'tailwind-merge';
 
     interface LinkProps extends HTMLAnchorAttributes {
         children: Snippet;
-        variant?: 'default' | 'primary' | 'secondary';
+        variant?: 'plain' | 'primary' | 'secondary';
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
-    let { children, variant, class: className, ...props }: LinkProps = $props();
+    let { children, variant = 'plain', size = 'md', class: className, ...props }: LinkProps = $props();
 
     let linkVariants = {
-        default: 'focus-visible:ring-foreground focus-visible:ring-offset-0 focus-visible:ring-inset font-normal',
-        primary: 'bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary',
-        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-secondary'
+        plain: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
+        primary: 'bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-2 font-medium',
+        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-secondary focus-visible:ring-offset-2 font-medium'
     };
 
     let linkSizes = {
         icon: '',
-        xs: 'px-4 py-2 text-xs',
-        sm: 'px-4 py-2 text-sm',
-        md: 'px-5 py-2.5 text-sm',
-        lg: 'px-5 py-2.5 text-sm',
-        xl: 'px-6 py-3 text-base'
+        xs: 'h-8 px-4 text-xs',
+        sm: 'h-9 px-4 text-sm',
+        md: 'h-10 px-5 text-sm',
+        lg: 'h-11 px-5 text-sm',
+        xl: 'h-12 px-6 text-base'
     };
 
     let linkCore =
-        'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none group';
-    let linkVarient = linkVariants[variant ?? 'default'];
-    let linkSize = linkSizes[props.size ?? 'md'];
-    let linkStyles = twMerge(linkCore, linkVarient, linkSize);
+        'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
+    let linkStyles = `${linkCore} ${linkVariants[variant]} ${linkSizes[size]}`;
 </script>
 
 <a {...props} class={twMerge(linkStyles, className)}>{@render children()}</a>

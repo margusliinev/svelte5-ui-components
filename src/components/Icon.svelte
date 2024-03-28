@@ -22,4 +22,4 @@
     };
 </script>
 
-{@html icons[name]?.replace('<svg', `<svg height=${iconSizes[size]} width=${size} fill=${fill} stroke=${stroke} stroke-width=${strokeWidth} class='antialiased' focusable="false"`)}
+{@html icons[name]?.replace('<svg', `<svg height=${iconSizes[size]} width=${iconSizes[size]} fill=${fill} stroke=${stroke} stroke-width=${strokeWidth} class='antialiased' focusable="false"`)}
