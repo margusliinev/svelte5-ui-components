@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Button, Icon, Link } from '$components';
+    import { Button, Card, Icon, Link } from '$components';
     import { SidebarDesktop, SidebarMobile } from '$layout';
     import '../styles/fonts.css';
     import '../styles/index.css';
@@ -38,7 +38,7 @@
         <SidebarDesktop route={data.route} {toggleSidebar} />
         <SidebarMobile route={data.route} {open} {toggleSidebar} />
         <main>
-            <div>{@render children()}</div>
+            <Card>{@render children()}</Card>
         </main>
     </div>
 </div>
