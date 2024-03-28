@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Button, Card, Icon, Link } from '$components';
+    import { Button, Card, Icon, Link, ThemeSwitch } from '$components';
     import { SidebarDesktop, SidebarMobile } from '$layout';
     import '../styles/fonts.css';
     import '../styles/index.css';
@@ -13,9 +13,7 @@
 
     $effect(() => {
         let theme = localStorage.getItem('theme');
-        if (theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-        }
+        if (theme) document.documentElement.setAttribute('data-theme', theme);
     });
 </script>
 
@@ -29,6 +27,7 @@
                 <Link href="/home" size="sm" class={`${data.route?.split('/')[1] === 'home' ? 'bg-primary/20' : ''}`}>Home</Link>
                 <Link href="https://github.com/margusliinev/svelte5-ui-components" size="sm" target="_blank">GitHub</Link>
             </nav>
+            <ThemeSwitch />
         </div>
         <Button style="plain" size="icon" class="lg:hidden" aria-label="menu" onclick={toggleSidebar}>
             <Icon name="menu" />

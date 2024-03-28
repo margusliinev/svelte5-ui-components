@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { Snippet } from 'svelte';
     import type { HTMLAnchorAttributes } from 'svelte/elements';
+    import type { Snippet } from 'svelte';
 
     interface SidebarLinkProps extends HTMLAnchorAttributes {
         children: Snippet;

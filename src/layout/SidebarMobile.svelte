@@ -3,8 +3,8 @@
     import { SidebarLinks } from '.';
 
     interface MobileSidebarProps {
-        route: string | null;
         open: boolean;
+        route: string | null;
         toggleSidebar: () => void;
     }
 
