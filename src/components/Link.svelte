@@ -27,7 +27,7 @@
     };
 
     let linkCore =
-        'inline-flex items-center justify-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
+        'flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
     let linkStyles = `${linkCore} ${linkVariants[variant]} ${linkSizes[size]}`;
 </script>
 

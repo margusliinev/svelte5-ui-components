@@ -10,7 +10,7 @@
             <h2 class="font-medium">Size: <span class="uppercase">{`${sizes[i]}`}</span></h2>
 
             {#each variants as variant}
-                <Button {variant} {size} class="capitalize">{variant}</Button>
+                <Button {variant} {size}>{variant}</Button>
             {/each}
 
             <Button variant="secondary" {size} disabled>Disabled</Button>

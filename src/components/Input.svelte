@@ -41,8 +41,10 @@
     input[type='week']::-webkit-calendar-picker-indicator,
     input[type='date']::-webkit-inner-spin-button,
     input[type='date']::-webkit-calendar-picker-indicator {
+        position: absolute;
         background: none;
         z-index: 10;
+        right: 0.7rem;
     }
     input[type='file']::-webkit-file-upload-button {
         position: absolute;

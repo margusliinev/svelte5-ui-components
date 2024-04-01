@@ -8,15 +8,15 @@
 
     interface DropdownButtonProps extends HTMLButtonAttributes {
         children: Snippet;
-        icon?: boolean;
+        chevron?: boolean;
     }
 
     const dropdown = getContext<DropdownState>('dropdown');
 
-    let { children, icon, class: className, ...props }: DropdownButtonProps = $props();
+    let { children, chevron = false, class: className, ...props }: DropdownButtonProps = $props();
 
     let dropdownButtonStyles =
-        'focus-visible:ring-foreground focus-visible:ring-offset-0 transition-none inline-flex items-center justify-center gap-1 capitalize rounded-md focus-visible:outline-none focus-visible:ring-2 h-10 px-5 text-sm ring-1 ring-border ring-inset bg-background font-medium';
+        'transition-none flex justify-center items-center gap-1 capitalize rounded-md h-10 px-5 text-sm ring-1 ring-border ring-inset bg-background font-medium focus-visible:ring-foreground focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:ring-2';
 </script>
 
 <button
@@ -29,7 +29,7 @@
     onblur={dropdown.handleBlur}
 >
     {@render children()}
-    {#if icon}
+    {#if chevron}
         {#if dropdown.open}
             <Icon name="chevron-up" size="xs" />
         {:else}

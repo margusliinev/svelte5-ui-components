@@ -12,4 +12,4 @@
     let formCore = 'grid';
 </script>
 
-<form {...props} class={twMerge(formCore, className)}>{@render children()}</form>
+<form {...props} method="POST" class={twMerge(formCore, className)}>{@render children()}</form>

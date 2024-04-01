@@ -2,7 +2,7 @@
     import { Button, Form, FormField } from '$components';
 </script>
 
-<Form method="POST" class="max-w-sm gap-2">
+<Form onsubmit={(e) => e.preventDefault()} class="max-w-sm gap-2">
     <FormField type="text" label="username" />
     <FormField type="email" label="email" />
     <FormField type="password" label="password" />
