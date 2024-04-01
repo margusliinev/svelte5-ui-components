@@ -22,7 +22,7 @@
             </nav>
             <ThemeSwitch />
         </div>
-        <Button style="plain" size="icon" class="lg:hidden" aria-label="menu" onclick={toggleSidebar}>
+        <Button size="icon" class="lg:hidden" aria-label="menu" onclick={toggleSidebar}>
             <Icon name="menu" />
         </Button>
     </header>
