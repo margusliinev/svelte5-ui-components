@@ -16,6 +16,7 @@
     <SidebarLink href="/home/button" {route} {toggleSidebar}>button</SidebarLink>
     <SidebarLink href="/home/card" {route} {toggleSidebar}>card</SidebarLink>
     <SidebarLink href="/home/dropdown" {route} {toggleSidebar}>dropdown</SidebarLink>
+    <SidebarLink href="/home/icon" {route} {toggleSidebar}>icon</SidebarLink>
     <SidebarLink href="/home/link" {route} {toggleSidebar}>link</SidebarLink>
     <SidebarHeading>forms</SidebarHeading>
     <SidebarLink href="/home/form" {route} {toggleSidebar}>form</SidebarLink>
