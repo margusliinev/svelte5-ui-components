@@ -19,10 +19,10 @@ This is a repository for custom Svelte 5 UI components that you can copy paste i
 4. ButtonSpinner
 5. Card
 6. Form
-7. FormField
-8. Label
-9. Input
-10. InputError
-11. Icon
-12. Link
+7. Label
+8. Icon
+9. Link
+10. Input
+11. InputField
+12. FieldError
 13. ThemeSwitch

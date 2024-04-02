@@ -11,14 +11,15 @@
 
 <ul class="flex max-w-[200px] flex-col gap-2">
     <SidebarHeading>components</SidebarHeading>
-    <SidebarLink href="/home/alert" {route} {toggleSidebar}>alert</SidebarLink>
-    <SidebarLink href="/home/badge" {route} {toggleSidebar}>badge</SidebarLink>
-    <SidebarLink href="/home/button" {route} {toggleSidebar}>button</SidebarLink>
-    <SidebarLink href="/home/card" {route} {toggleSidebar}>card</SidebarLink>
-    <SidebarLink href="/home/dropdown" {route} {toggleSidebar}>dropdown</SidebarLink>
-    <SidebarLink href="/home/icon" {route} {toggleSidebar}>icon</SidebarLink>
-    <SidebarLink href="/home/link" {route} {toggleSidebar}>link</SidebarLink>
+    <SidebarLink href="/home/alert" {route} {toggleSidebar}>Alert</SidebarLink>
+    <SidebarLink href="/home/badge" {route} {toggleSidebar}>Badge</SidebarLink>
+    <SidebarLink href="/home/button" {route} {toggleSidebar}>Button</SidebarLink>
+    <SidebarLink href="/home/card" {route} {toggleSidebar}>Card</SidebarLink>
+    <SidebarLink href="/home/dropdown" {route} {toggleSidebar}>Dropdown</SidebarLink>
+    <SidebarLink href="/home/icon" {route} {toggleSidebar}>Icon</SidebarLink>
+    <SidebarLink href="/home/link" {route} {toggleSidebar}>Link</SidebarLink>
     <SidebarHeading>forms</SidebarHeading>
-    <SidebarLink href="/home/form" {route} {toggleSidebar}>form</SidebarLink>
-    <SidebarLink href="/home/formfield" {route} {toggleSidebar}>formField</SidebarLink>
+    <SidebarLink href="/home/form" {route} {toggleSidebar}>Form</SidebarLink>
+    <SidebarLink href="/home/inputfield" {route} {toggleSidebar}>Input</SidebarLink>
+    <SidebarLink href="/home/textarea" {route} {toggleSidebar}>Textarea</SidebarLink>
 </ul>

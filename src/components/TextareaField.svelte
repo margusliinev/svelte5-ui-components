@@ -1,10 +1,9 @@
 <script lang="ts">
-    import type { HTMLAttributes, HTMLInputAttributes } from 'svelte/elements';
-    import { Label, Input, InputError } from '$components';
+    import type { HTMLAttributes } from 'svelte/elements';
+    import { Label, Textarea, FieldError } from '$components';
     import { twMerge } from 'tailwind-merge';
 
-    interface FormFieldProps extends HTMLAttributes<HTMLDivElement> {
-        type: HTMLInputAttributes['type'];
+    interface TextareaFieldProps extends HTMLAttributes<HTMLDivElement> {
         label: string;
         error?: string | undefined;
         placeholder?: string;
@@ -14,15 +13,16 @@
         disabled?: boolean;
     }
 
-    let { label, type, error, placeholder, minlength = 0, maxlength = 100, required = true, disabled = false, ...props }: FormFieldProps = $props();
+    let { label, error, placeholder, minlength = 0, maxlength = 500, required = true, disabled = false, ...props }: TextareaFieldProps = $props();
 
-    let formFieldStyles = 'space-y-1';
+    let value = $state('');
+    let textareaFieldStyles = 'relative space-y-1';
 </script>
 
-<div {...props} class={twMerge(formFieldStyles, props.class)}>
+<div {...props} class={twMerge(textareaFieldStyles, props.class)}>
     <Label for={label} aria-disabled={disabled}>{label}</Label>
-    <Input
-        {type}
+    <span class="absolute right-0 text-sm">{value?.length ?? 0} / {maxlength}</span>
+    <Textarea
         id={label}
         name={label}
         aria-describedby={`${label}-error`}
@@ -33,10 +33,11 @@
         {maxlength}
         {required}
         {disabled}
+        bind:value
     />
-    <InputError id={`${label}-error`}>
+    <FieldError id={`${label}-error`}>
         {#if error}
             {error}
         {/if}
-    </InputError>
+    </FieldError>
 </div>
