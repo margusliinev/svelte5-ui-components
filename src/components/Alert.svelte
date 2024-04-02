@@ -10,7 +10,7 @@
         title?: string;
     }
 
-    let { children, variant = 'danger', title, class: className, ...props }: AlertProps = $props();
+    let { children, variant = 'danger', title, ...props }: AlertProps = $props();
 
     let alertVariants = {
         success: 'border-success/30 text-success bg-success/10',
@@ -22,7 +22,7 @@
     let alertStyles = `${alertCore} ${alertVariants[variant]}`;
 </script>
 
-<div {...props} role="alert" class={twMerge(alertStyles, className)}>
+<div {...props} role="alert" class={twMerge(alertStyles, props.class)}>
     {#if variant === 'success'}
         <Icon name="check" size="sm" />
     {:else if variant === 'warning'}

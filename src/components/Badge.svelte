@@ -8,7 +8,7 @@
         variant: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
     }
 
-    let { children, variant = 'primary', class: className, ...props }: BadgeProps = $props();
+    let { children, variant = 'primary', ...props }: BadgeProps = $props();
 
     let badgeVariants = {
         primary: 'bg-primary hover:bg-primary-hover text-primary-foreground',
@@ -21,4 +21,4 @@
     let badgeStyles = `${badgeCore} ${badgeVariants[variant]}`;
 </script>
 
-<span {...props} class={twMerge(badgeStyles, className)}>{@render children()}</span>
+<span {...props} class={twMerge(badgeStyles, props.class)}>{@render children()}</span>

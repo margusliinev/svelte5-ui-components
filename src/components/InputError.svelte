@@ -8,9 +8,9 @@
         id: string;
     }
 
-    let { children, id, class: className, ...props }: InputErrorProps = $props();
+    let { children, id, ...props }: InputErrorProps = $props();
 
     let inputErrorStyles = 'block text-sm text-input-invalid';
 </script>
 
-<span {...props} {id} class={twMerge(inputErrorStyles, className)}>{@render children()}</span>
+<span {...props} {id} class={twMerge(inputErrorStyles, props.class)}>{@render children()}</span>

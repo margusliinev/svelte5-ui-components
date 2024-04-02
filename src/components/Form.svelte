@@ -7,9 +7,9 @@
         children: Snippet;
     }
 
-    let { children, class: className, ...props }: FormProps = $props();
+    let { children, ...props }: FormProps = $props();
 
     let formCore = 'grid';
 </script>
 
-<form {...props} method="POST" class={twMerge(formCore, className)}>{@render children()}</form>
+<form {...props} method="POST" class={twMerge(formCore, props.class)}>{@render children()}</form>

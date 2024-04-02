@@ -11,10 +11,10 @@
         isLoading?: boolean;
     }
 
-    let { children, variant = 'plain', size = 'md', isLoading = false, class: className, ...props }: ButtonProps = $props();
+    let { children, variant = 'plain', size = 'md', isLoading = false, ...props }: ButtonProps = $props();
 
     let buttonVariants = {
-        plain: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
+        plain: 'bg-transparent text-foreground focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
         primary: 'bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-2 font-medium',
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-secondary focus-visible:ring-offset-2 font-medium',
         success: 'bg-success text-success-foreground hover:bg-success-hover focus-visible:ring-success focus-visible:ring-offset-2 font-medium',
@@ -32,11 +32,11 @@
     };
 
     let buttonCore =
-        'flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
+        'inline-flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
     let buttonStyles = `${buttonCore} ${buttonVariants[variant]} ${buttonSizes[size]}`;
 </script>
 
-<button {...props} class={twMerge(buttonStyles, className)}>
+<button {...props} class={twMerge(buttonStyles, props.class)}>
     {#if isLoading && variant !== 'plain' && size !== 'icon'}
         {#if size === 'xs' || size === 'sm'}
             <ButtonSpinner size="sm" />

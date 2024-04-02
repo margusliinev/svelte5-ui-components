@@ -6,11 +6,11 @@
     <Dropdown>
         <DropdownButton chevron><Icon name="user" size="sm" /><span>John Doe</span></DropdownButton>
         <DropdownMenu>
-            <DropdownItem><Link href="#" size="sm" class="justify-start rounded-none hover:bg-foreground/10">Your account</Link></DropdownItem>
-            <DropdownItem><Link href="#" size="sm" class="justify-start rounded-none hover:bg-foreground/10">Settings</Link></DropdownItem>
+            <DropdownItem><Link href="#" size="sm" class="flex justify-start rounded-none hover:bg-foreground/10">Your account</Link></DropdownItem>
+            <DropdownItem><Link href="#" size="sm" class="flex justify-start rounded-none hover:bg-foreground/10">Settings</Link></DropdownItem>
             <DropdownItem>
                 <Form onsubmit={(e) => e.preventDefault()}>
-                    <Button size="sm" class="justify-start rounded-none hover:bg-foreground/10">Logout</Button>
+                    <Button size="sm" class="flex justify-start rounded-none hover:bg-foreground/10">Logout</Button>
                 </Form>
             </DropdownItem>
         </DropdownMenu>
@@ -18,10 +18,10 @@
     <Dropdown>
         <DropdownButton>More Options</DropdownButton>
         <DropdownMenu class="grid-cols-2">
-            <DropdownItem><Link href="#" size="sm" class="justify-start rounded-none hover:bg-foreground/10">Pricing</Link></DropdownItem>
-            <DropdownItem><Link href="#" size="sm" class="justify-start rounded-none hover:bg-foreground/10">About</Link></DropdownItem>
-            <DropdownItem><Link href="#" size="sm" class="justify-start rounded-none hover:bg-foreground/10">Privacy</Link></DropdownItem>
-            <DropdownItem><Link href="#" size="sm" class="justify-start rounded-none hover:bg-foreground/10">Security</Link></DropdownItem>
+            <DropdownItem><Link href="#" size="sm" class="flex justify-start rounded-none hover:bg-foreground/10">Pricing</Link></DropdownItem>
+            <DropdownItem><Link href="#" size="sm" class="flex justify-start rounded-none hover:bg-foreground/10">About</Link></DropdownItem>
+            <DropdownItem><Link href="#" size="sm" class="flex justify-start rounded-none hover:bg-foreground/10">Privacy</Link></DropdownItem>
+            <DropdownItem><Link href="#" size="sm" class="flex justify-start rounded-none hover:bg-foreground/10">Security</Link></DropdownItem>
         </DropdownMenu>
     </Dropdown>
 </div>

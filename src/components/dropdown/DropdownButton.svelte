@@ -13,7 +13,7 @@
 
     const dropdown = getContext<DropdownState>('dropdown');
 
-    let { children, chevron = false, class: className, ...props }: DropdownButtonProps = $props();
+    let { children, chevron = false, ...props }: DropdownButtonProps = $props();
 
     let dropdownButtonStyles =
         'transition-none flex justify-center items-center gap-1 capitalize rounded-md h-10 px-5 text-sm ring-1 ring-border ring-inset bg-background font-medium focus-visible:ring-foreground focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:ring-2';
@@ -21,7 +21,7 @@
 
 <button
     {...props}
-    class={twMerge(dropdownButtonStyles, className)}
+    class={twMerge(dropdownButtonStyles, props.class)}
     aria-haspopup="menu"
     aria-expanded={dropdown.open}
     onclick={dropdown.handleClick}

@@ -9,10 +9,10 @@
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
-    let { children, variant = 'plain', size = 'md', class: className, ...props }: LinkProps = $props();
+    let { children, variant = 'plain', size = 'md', ...props }: LinkProps = $props();
 
     let linkVariants = {
-        plain: 'bg-transparent text-foreground hover:text-foreground-hover focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
+        plain: 'bg-transparent text-foreground focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
         primary: 'bg-primary text-primary-foreground hover:bg-primary-hover focus-visible:ring-primary focus-visible:ring-offset-2 font-medium',
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary-hover focus-visible:ring-secondary focus-visible:ring-offset-2 font-medium'
     };
@@ -27,8 +27,8 @@
     };
 
     let linkCore =
-        'flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
+        'inline-flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
     let linkStyles = `${linkCore} ${linkVariants[variant]} ${linkSizes[size]}`;
 </script>
 
-<a {...props} class={twMerge(linkStyles, className)}>{@render children()}</a>
+<a {...props} class={twMerge(linkStyles, props.class)}>{@render children()}</a>

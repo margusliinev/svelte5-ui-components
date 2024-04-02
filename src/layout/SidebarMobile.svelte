@@ -17,7 +17,7 @@
         <Icon name="close" stroke="white" />
     </Button>
     <div class="flex h-24 px-8">
-        <Link href="/" size="icon" class="text-2xl font-black uppercase text-primary">Svelte 5 UI</Link>
+        <Link href="/home/alert" size="icon" class="text-2xl font-black uppercase text-primary">Svelte 5 UI</Link>
     </div>
     <div class="px-8">
         <SidebarLinks {route} {toggleSidebar} />

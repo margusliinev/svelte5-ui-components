@@ -14,12 +14,12 @@
         disabled?: boolean;
     }
 
-    let { label, type, error, placeholder, minlength = 0, maxlength = 100, required = true, disabled = false, class: className, ...props }: FormFieldProps = $props();
+    let { label, type, error, placeholder, minlength = 0, maxlength = 100, required = true, disabled = false, ...props }: FormFieldProps = $props();
 
     let formFieldStyles = 'space-y-1';
 </script>
 
-<div {...props} class={twMerge(formFieldStyles, className)}>
+<div {...props} class={twMerge(formFieldStyles, props.class)}>
     <Label for={label} aria-disabled={disabled}>{label}</Label>
     <Input
         {type}

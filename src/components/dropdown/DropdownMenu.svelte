@@ -14,11 +14,11 @@
 
     let dropdownMenuStyles = 'grid absolute top-12 right-0 bg-background ring-1 ring-border ring-inset rounded-md z-50 w-max overflow-hidden';
 
-    let { children, class: className, ...props }: DropdownMenuProps = $props();
+    let { children, ...props }: DropdownMenuProps = $props();
 </script>
 
 {#if dropdown.open}
-    <div {...props} class={twMerge(dropdownMenuStyles, className)} role="menu" transition:fly|local={{ duration: 100 }} onfocusout={dropdown.handleBlur}>
+    <div {...props} class={twMerge(dropdownMenuStyles, props.class)} role="menu" transition:fly|local={{ duration: 100 }} onfocusout={dropdown.handleBlur}>
         {@render children()}
     </div>
 {/if}

@@ -6,7 +6,7 @@
         size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
-    let { size = 'md', class: className, ...props }: ButtonSpinnerProps = $props();
+    let { size = 'md', ...props }: ButtonSpinnerProps = $props();
 
     let buttonSpinnerSizes = {
         xs: 'h-3 w-3 border-[2px]',
@@ -20,6 +20,6 @@
     let buttonSpinnerStyles = `${buttonSpinnerCore} ${buttonSpinnerSizes[size]}`;
 </script>
 
-<div {...props} class={twMerge(buttonSpinnerStyles, className)} role="status" aria-label="loading">
+<div {...props} class={twMerge(buttonSpinnerStyles, props.class)} role="status" aria-label="loading">
     <span class="sr-only">Loading...</span>
 </div>
