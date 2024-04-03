@@ -5,7 +5,7 @@
 
     interface TextareaFieldProps extends HTMLAttributes<HTMLDivElement> {
         label: string;
-        error?: string | undefined;
+        error?: string;
         placeholder?: string;
         minlength?: number;
         maxlength?: number;

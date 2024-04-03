@@ -10,7 +10,7 @@
 
     let { children, id, ...props }: FieldErrorProps = $props();
 
-    let fieldErrorStyles = 'block text-sm text-field-invalid';
+    let fieldErrorStyles = 'block text-sm text-input-invalid';
 </script>
 
 <span {...props} {id} class={twMerge(fieldErrorStyles, props.class)}>{@render children()}</span>

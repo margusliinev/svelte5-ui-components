@@ -6,7 +6,7 @@
     interface InputFieldProps extends HTMLAttributes<HTMLDivElement> {
         type: HTMLInputAttributes['type'];
         label: string;
-        error?: string | undefined;
+        error?: string;
         placeholder?: string;
         minlength?: number;
         maxlength?: number;
