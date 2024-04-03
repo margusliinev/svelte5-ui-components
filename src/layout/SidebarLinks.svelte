@@ -22,4 +22,5 @@
     <SidebarLink href="/home/form" {route} {toggleSidebar}>Form</SidebarLink>
     <SidebarLink href="/home/input" {route} {toggleSidebar}>Input</SidebarLink>
     <SidebarLink href="/home/textarea" {route} {toggleSidebar}>Textarea</SidebarLink>
+    <SidebarLink href="/home/select" {route} {toggleSidebar}>Select</SidebarLink>
 </ul>

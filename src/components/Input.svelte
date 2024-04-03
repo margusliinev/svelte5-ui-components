@@ -5,33 +5,31 @@
 
     interface InputProps extends HTMLInputAttributes {
         type: HTMLInputAttributes['type'];
-        name: string;
-        id: string;
     }
 
-    let { type, id, name, ...props }: InputProps = $props();
+    let { type, ...props }: InputProps = $props();
 
     let inputStyles =
-        'h-10 flex w-full rounded-md bg-input px-3 py-2 text-sm ring-1 ring-inset ring-border ring-offset-background file:border-0 file:bg-transparent file:text-sm file:text-foreground placeholder:text-input-placeholder focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-input-focus disabled:cursor-not-allowed disabled:opacity-70 disabled:dark:opacity-50 aria-[invalid]:ring-input-invalid';
+        'h-10 flex w-full rounded-md bg-input px-3 py-2 text-sm ring-1 !ring-inset ring-border border-0 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:text-foreground placeholder:text-input-placeholder focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-input-focus disabled:cursor-not-allowed disabled:opacity-70 disabled:dark:opacity-50 aria-[invalid]:ring-input-invalid';
 </script>
 
 {#if type === 'date' || type === 'datetime-local' || type === 'month' || type === 'week'}
     <div class="relative [&>svg]:absolute [&>svg]:right-3 [&>svg]:top-3 [&>svg]:z-0">
         <Icon name="calendar" size="xs" />
-        <input {...props} {type} {id} {name} class={twMerge(inputStyles, props.class)} />
+        <input {...props} {type} class={twMerge(inputStyles, props.class)} />
     </div>
 {:else if type === 'time'}
     <div class="relative [&>svg]:absolute [&>svg]:right-3 [&>svg]:top-3 [&>svg]:z-0">
         <Icon name="clock" size="xs" />
-        <input {...props} {type} {id} {name} class={twMerge(inputStyles, props.class)} />
+        <input {...props} {type} class={twMerge(inputStyles, props.class)} />
     </div>
 {:else if type === 'file'}
     <div class="relative [&>svg]:absolute [&>svg]:right-3 [&>svg]:top-3 [&>svg]:z-0">
         <Icon name="upload" size="xs" />
-        <input {...props} {type} {id} {name} class={twMerge(inputStyles, props.class)} />
+        <input {...props} {type} class={twMerge(inputStyles, props.class)} />
     </div>
 {:else}
-    <input {...props} {type} {id} {name} class={twMerge(inputStyles, props.class)} />
+    <input {...props} {type} class={twMerge(inputStyles, props.class)} />
 {/if}
 
 <style>

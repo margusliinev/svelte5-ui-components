@@ -12,6 +12,7 @@ import InputField from './InputField.svelte';
 import FieldError from './FieldError.svelte';
 import Textarea from './Textarea.svelte';
 import TextareaField from './TextareaField.svelte';
+import Select from './Select.svelte';
 import ThemeSwitch from './ThemeSwitch.svelte';
 import Dropdown from './dropdown/Dropdown.svelte';
 import DropdownButton from './dropdown/DropdownButton.svelte';
@@ -30,6 +31,7 @@ export {
     FieldError,
     Textarea,
     TextareaField,
+    Select,
     Label,
     Icon,
     Link,
