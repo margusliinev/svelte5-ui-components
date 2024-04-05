@@ -5,13 +5,13 @@
 
     interface IconProps extends SVGAttributes<SVGElement> {
         name: string;
-        size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
         fill?: string;
         stroke?: string;
         strokeWidth?: string;
+        size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
-    let { name, size = 'md', fill = 'none', stroke = 'currentColor', strokeWidth = '2' }: IconProps = $props();
+    let { name, fill = 'none', stroke = 'currentColor', strokeWidth = '2', size = 'md' }: IconProps = $props();
 
     let iconSizes = {
         xs: '16',

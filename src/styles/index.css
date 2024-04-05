@@ -110,9 +110,9 @@
         @apply hidden border-0;
     }
     input[type='file'] {
-        @apply bg-file-light bg-size-1 bg-center-right bg-no-repeat dark:bg-file-dark;
+        @apply bg-size-1 bg-center-right bg-file-light bg-no-repeat dark:bg-file-dark;
     }
     select {
-        @apply bg-arrow-light bg-size-1 bg-center-right bg-no-repeat dark:bg-arrow-dark;
+        @apply bg-size-1 bg-center-right bg-arrow-light bg-no-repeat dark:bg-arrow-dark;
     }
 }

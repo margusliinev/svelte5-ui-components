@@ -16,7 +16,7 @@
     let value = $state('');
 </script>
 
-<div {...rest} class="relative">
+<div {...rest} class="relative space-y-1">
     <label for={label} aria-disabled={disabled}>{label}</label>
     <span class="absolute right-0 text-sm">{value?.length ?? 0} / {maxlength}</span>
     <textarea

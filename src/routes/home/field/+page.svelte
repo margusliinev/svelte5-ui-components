@@ -3,7 +3,7 @@
     let fruits = { 1: 'Apple', 2: 'Banana', 3: 'Cherry', 4: 'Orange' };
 </script>
 
-<Form class="grid-cols-2 gap-4">
+<Form class="grid grid-cols-2 gap-4">
     <fieldset class="grid gap-4">
         <InputField type="text" label="text" error="" />
         <InputField type="email" label="email" error="" />

@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
-    import { twMerge } from 'tailwind-merge';
     import { Icon } from '$components';
 
     interface AlertProps extends HTMLAttributes<HTMLDivElement> {
@@ -10,7 +9,7 @@
         title?: string;
     }
 
-    let { children, variant = 'danger', title, ...props }: AlertProps = $props();
+    let { children, variant = 'success', title = undefined, ...props }: AlertProps = $props();
 
     let alertVariants = {
         success: 'border-success/30 text-success bg-success/10',
@@ -18,11 +17,11 @@
         danger: 'border-danger/30 text-danger bg-danger/10',
         info: 'border-info/30 text-info bg-info/10'
     };
-    let alertCore = 'text-sm w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg]:absolute [&>svg]:w-min';
+    let alertCore = 'text-sm w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg]:absolute';
     let alertStyles = `${alertCore} ${alertVariants[variant]}`;
 </script>
 
-<div {...props} role="alert" class={twMerge(alertStyles, props.class)}>
+<div {...props} role="alert" class={alertStyles}>
     {#if variant === 'success'}
         <Icon name="check" size="sm" />
     {:else if variant === 'warning'}

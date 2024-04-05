@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Badge } from '$components';
-    let variants = ['primary', 'secondary', 'success', 'warning', 'danger'] as const;
+    let variants = ['success', 'warning', 'danger', 'info'] as const;
 </script>
 
 <div class="flex flex-wrap items-center gap-4">

@@ -1,6 +1,5 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
-    import { twMerge } from 'tailwind-merge';
 
     interface ButtonSpinnerProps extends HTMLAttributes<HTMLDivElement> {
         size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -20,6 +19,6 @@
     let buttonSpinnerStyles = `${buttonSpinnerCore} ${buttonSpinnerSizes[size]}`;
 </script>
 
-<div {...props} class={twMerge(buttonSpinnerStyles, props.class)} role="status" aria-label="loading">
+<div {...props} class={buttonSpinnerStyles} role="status" aria-label="loading">
     <span class="sr-only">Loading...</span>
 </div>

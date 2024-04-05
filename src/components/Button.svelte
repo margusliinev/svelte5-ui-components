@@ -32,7 +32,7 @@
     };
 
     let buttonCore =
-        'inline-flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
+        'flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
     let buttonStyles = `${buttonCore} ${buttonVariants[variant]} ${buttonSizes[size]}`;
 </script>
 

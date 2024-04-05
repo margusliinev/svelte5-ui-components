@@ -11,7 +11,7 @@
     let { label, error, options, disabled, ...props }: SelectProps = $props();
 </script>
 
-<div {...props}>
+<div {...props} class="space-y-1">
     <label for={label} aria-disabled={disabled}>{label}</label>
     <select
         id={label}

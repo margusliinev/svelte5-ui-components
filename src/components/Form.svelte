@@ -1,15 +1,12 @@
 <script lang="ts">
     import type { HTMLFormAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
-    import { twMerge } from 'tailwind-merge';
 
     interface FormProps extends HTMLFormAttributes {
         children: Snippet;
     }
 
     let { children, ...props }: FormProps = $props();
-
-    let formCore = 'grid';
 </script>
 
-<form {...props} method="POST" class={twMerge(formCore, props.class)}>{@render children()}</form>
+<form {...props} method="POST">{@render children()}</form>

@@ -1,8 +1,8 @@
 <script lang="ts">
-    import type { HTMLAttributes, HTMLInputAttributes } from 'svelte/elements';
+    import type { HTMLAttributes } from 'svelte/elements';
 
     interface InputFieldProps extends HTMLAttributes<HTMLDivElement> {
-        type: HTMLInputAttributes['type'];
+        type: 'text' | 'email' | 'password' | 'search' | 'datetime-local' | 'date' | 'month' | 'week' | 'time' | 'file';
         label: string;
         error: string;
         placeholder?: string;
@@ -15,7 +15,7 @@
     let { type, label, error, placeholder = undefined, minlength = 0, maxlength = 100, required = true, disabled = false, ...rest }: InputFieldProps = $props();
 </script>
 
-<div {...rest}>
+<div {...rest} class="space-y-1">
     <label for={label} aria-disabled={disabled}>{label}</label>
     <input
         {type}
