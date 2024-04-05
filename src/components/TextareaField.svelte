@@ -1,7 +1,5 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
-    import { Label, Textarea, FieldError } from '$components';
-    import { twMerge } from 'tailwind-merge';
 
     interface TextareaFieldProps extends HTMLAttributes<HTMLDivElement> {
         label: string;
@@ -13,31 +11,30 @@
         disabled?: boolean;
     }
 
-    let { label, error, placeholder, minlength = 0, maxlength = 500, required = true, disabled = false, ...props }: TextareaFieldProps = $props();
+    let { label, error, placeholder = undefined, minlength = 0, maxlength = 500, required = true, disabled = false, ...rest }: TextareaFieldProps = $props();
 
     let value = $state('');
-    let textareaFieldStyles = 'relative space-y-1';
 </script>
 
-<div {...props} class={twMerge(textareaFieldStyles, props.class)}>
-    <Label for={label} aria-disabled={disabled}>{label}</Label>
+<div {...rest} class="relative">
+    <label for={label} aria-disabled={disabled}>{label}</label>
     <span class="absolute right-0 text-sm">{value?.length ?? 0} / {maxlength}</span>
-    <Textarea
+    <textarea
         id={label}
         name={label}
         aria-describedby={`${label}-error`}
         aria-invalid={error ? true : undefined}
-        oninput={() => (error = '')}
         {placeholder}
         {minlength}
         {maxlength}
         {required}
         {disabled}
         bind:value
+        class="relative min-h-24 w-full appearance-none rounded-md border-0 bg-input px-3 py-2 text-sm leading-6 ring-1 ring-inset ring-border ring-offset-background placeholder:text-input-placeholder focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-input-focus disabled:cursor-not-allowed disabled:opacity-70 aria-[invalid]:ring-input-invalid"
     />
-    <FieldError id={`${label}-error`}>
+    <span id={`${label}-error`} class="block text-sm text-input-invalid">
         {#if error}
             {error}
         {/if}
-    </FieldError>
+    </span>
 </div>

@@ -91,33 +91,28 @@
         @apply bg-background font-Inter text-foreground antialiased;
     }
 
-    input,
-    textarea,
-    select {
-        @apply relative w-full rounded-md border-0 bg-input px-3 py-2 text-sm ring-1 ring-inset ring-border ring-offset-background placeholder:text-input-placeholder focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-input-focus disabled:cursor-not-allowed disabled:opacity-70 aria-[invalid]:ring-input-invalid disabled:dark:opacity-50;
-    }
+    /* FORM RESET & STYLES */
 
-    input,
-    select {
-        @apply h-10;
+    label {
+        @apply text-sm capitalize peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
     }
 
     input[type='datetime-local']::-webkit-calendar-picker-indicator,
     input[type='date']::-webkit-calendar-picker-indicator,
     input[type='month']::-webkit-calendar-picker-indicator,
     input[type='week']::-webkit-calendar-picker-indicator {
-        @apply bg-calendar-light dark:bg-calendar-dark absolute right-3;
+        @apply absolute right-3 bg-calendar-light dark:bg-calendar-dark;
     }
     input[type='time']::-webkit-calendar-picker-indicator {
-        @apply bg-clock-light dark:bg-clock-dark absolute right-2.5;
+        @apply absolute right-2.5 bg-clock-light dark:bg-clock-dark;
     }
     input[type='file']::-webkit-file-upload-button {
         @apply hidden border-0;
     }
     input[type='file'] {
-        @apply bg-file-light dark:bg-file-dark bg-file-position bg-file-size bg-no-repeat leading-6;
+        @apply bg-file-light bg-size-1 bg-center-right bg-no-repeat dark:bg-file-dark;
     }
     select {
-        @apply bg-arrow-light dark:bg-arrow-dark bg-arrow-position bg-arrow-size appearance-none bg-no-repeat;
+        @apply bg-arrow-light bg-size-1 bg-center-right bg-no-repeat dark:bg-arrow-dark;
     }
 }

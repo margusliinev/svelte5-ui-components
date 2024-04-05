@@ -19,5 +19,5 @@
     <SidebarLink href="/home/icon" {route} {toggleSidebar}>Icon</SidebarLink>
     <SidebarLink href="/home/link" {route} {toggleSidebar}>Link</SidebarLink>
     <SidebarHeading>forms</SidebarHeading>
-    <SidebarLink href="/home/input" {route} {toggleSidebar}>Input</SidebarLink>
+    <SidebarLink href="/home/field" {route} {toggleSidebar}>Field</SidebarLink>
 </ul>
