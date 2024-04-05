@@ -1,12 +1,12 @@
 <script lang="ts">
     import type { HTMLAttributes, HTMLInputAttributes } from 'svelte/elements';
-    import { Label, Input, FieldError } from '$components';
+    import { Label, FieldError } from '$components';
     import { twMerge } from 'tailwind-merge';
 
     interface InputFieldProps extends HTMLAttributes<HTMLDivElement> {
         type: HTMLInputAttributes['type'];
         label: string;
-        error?: string;
+        error: string;
         placeholder?: string;
         minlength?: number;
         maxlength?: number;
@@ -21,19 +21,7 @@
 
 <div {...props} class={twMerge(inputFieldStyles, props.class)}>
     <Label for={label} aria-disabled={disabled}>{label}</Label>
-    <Input
-        {type}
-        id={label}
-        name={label}
-        aria-describedby={`${label}-error`}
-        aria-invalid={error ? true : undefined}
-        oninput={() => (error = '')}
-        {placeholder}
-        {minlength}
-        {maxlength}
-        {required}
-        {disabled}
-    />
+    <input {type} id={label} name={label} aria-describedby={`${label}-error`} aria-invalid={error ? true : undefined} {placeholder} {minlength} {maxlength} {required} {disabled} />
     <FieldError id={`${label}-error`}>
         {#if error}
             {error}
