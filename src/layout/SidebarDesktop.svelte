@@ -1,12 +1,12 @@
 <script lang="ts">
     import { SidebarLinks } from '.';
 
-    interface SidebarDesktopProps {
+    interface Props {
         route: string | null;
         toggleSidebar: () => void;
     }
 
-    let { route, toggleSidebar }: SidebarDesktopProps = $props();
+    let { route, toggleSidebar }: Props = $props();
 </script>
 
 <aside class="hidden w-60 lg:block">

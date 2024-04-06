@@ -3,13 +3,13 @@
     import type { Snippet } from 'svelte';
     import { Icon } from '$components';
 
-    interface AlertProps extends HTMLAttributes<HTMLDivElement> {
+    interface Props extends HTMLAttributes<HTMLDivElement> {
         children: Snippet;
         variant: 'success' | 'warning' | 'danger' | 'info';
         title?: string;
     }
 
-    let { children, variant = 'success', title = undefined, ...props }: AlertProps = $props();
+    let { children, variant = 'success', title, ...rest }: Props = $props();
 
     let alertVariants = {
         success: 'border-success/30 text-success bg-success/10',
@@ -21,7 +21,7 @@
     let alertStyles = `${alertCore} ${alertVariants[variant]}`;
 </script>
 
-<div {...props} role="alert" class={alertStyles}>
+<div {...rest} role="alert" class={alertStyles}>
     {#if variant === 'success'}
         <Icon name="check" size="sm" />
     {:else if variant === 'warning'}

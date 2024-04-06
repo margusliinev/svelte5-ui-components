@@ -1,11 +1,11 @@
 <script lang="ts">
     import type { Snippet } from 'svelte';
 
-    interface SidebarHeadingProps {
+    interface Props {
         children: Snippet;
     }
 
-    let { children }: SidebarHeadingProps = $props();
+    let { children }: Props = $props();
 </script>
 
 <h4 class="mb-4 text-xs font-medium uppercase text-secondary">{@render children()}</h4>

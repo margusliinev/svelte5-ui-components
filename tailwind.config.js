@@ -30,14 +30,8 @@ export default {
                 'screen-10': '10vh'
             },
             colors: {
-                background: {
-                    DEFAULT: 'hsl(var(--background) / <alpha-value>)',
-                    hover: 'hsl(var(--background-hover) / <alpha-value>)'
-                },
-                foreground: {
-                    DEFAULT: 'hsl(var(--foreground) / <alpha-value>)',
-                    hover: 'hsl(var(--foreground-hover) / <alpha-value>)'
-                },
+                background: 'hsl(var(--background) / <alpha-value>)',
+                foreground: 'hsl(var(--foreground) / <alpha-value>)',
                 primary: {
                     DEFAULT: 'hsl(var(--primary) / <alpha-value>)',
                     foreground: 'hsl(var(--primary-foreground) / <alpha-value>)',
@@ -74,13 +68,8 @@ export default {
                     placeholder: 'hsl(var(--input-placeholder) / <alpha-value>)',
                     invalid: 'hsl(var(--input-invalid) / <alpha-value>)'
                 },
-                border: {
-                    DEFAULT: 'hsl(var(--border) / <alpha-value>)',
-                    strong: 'hsl(var(--border-strong) / <alpha-value>)'
-                },
-                card: {
-                    DEFAULT: 'hsl(var(--card) / <alpha-value>)'
-                }
+                border: 'hsl(var(--border) / <alpha-value>)',
+                card: 'hsl(var(--card) / <alpha-value>)'
             },
             borderRadius: {
                 DEFAULT: 'var(--radius)',
@@ -113,11 +102,7 @@ export default {
                 'file-light':
                     "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' %3E%3Cpath d='M14 3v4a1 1 0 0 0 1 1h4'/%3E%3Cpath d='M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M12 11v6' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M9.5 13.5l2.5 -2.5l2.5 2.5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E\")",
                 'file-dark':
-                    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' %3E%3Cpath d='M14 3v4a1 1 0 0 0 1 1h4'/%3E%3Cpath d='M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M12 11v6' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M9.5 13.5l2.5 -2.5l2.5 2.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E\")",
-                'search-cancel-light':
-                    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black' %3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12' /%3E%3C/svg%3E\")",
-                'search-cancel-dark':
-                    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' %3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12' /%3E%3C/svg%3E\")"
+                    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' %3E%3Cpath d='M14 3v4a1 1 0 0 0 1 1h4'/%3E%3Cpath d='M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M12 11v6' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M9.5 13.5l2.5 -2.5l2.5 2.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E\")"
             },
             backgroundSize: {
                 'size-1': '1rem'

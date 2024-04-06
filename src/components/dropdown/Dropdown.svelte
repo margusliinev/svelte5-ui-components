@@ -6,16 +6,16 @@
     import { setContext } from 'svelte';
     import { twMerge } from 'tailwind-merge';
 
-    interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
+    interface Props extends HTMLAttributes<HTMLDivElement> {
         children: Snippet;
     }
 
     const dropdown = new CreateDropdownState({ open: false });
     setContext<DropdownState>('dropdown', dropdown);
 
-    let { children, ...props }: DropdownProps = $props();
+    let { children, ...rest }: Props = $props();
 
     let dropdownStyles = 'relative';
 </script>
 
-<div {...props} class={twMerge(dropdownStyles, props.class)}>{@render children()}</div>
+<div {...rest} class={twMerge(dropdownStyles, rest.class)}>{@render children()}</div>

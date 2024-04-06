@@ -1,26 +1,23 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
+    import { Label } from '$components';
 
-    interface SelectProps extends HTMLAttributes<HTMLDivElement> {
+    interface Props extends HTMLAttributes<HTMLDivElement> {
         label: string;
         error: string;
-        options: { [value: string | number]: string | number } | string[] | string;
         disabled?: boolean;
+        options: { [value: string | number]: string | number } | string[] | string;
     }
 
-    let { label, error, options, disabled, ...props }: SelectProps = $props();
+    let { label, error = '', disabled = false, options, ...rest }: Props = $props();
+
+    let selectStyles =
+        'relative h-10 w-full rounded-md bg-input px-3 py-2 text-sm ring-1 ring-inset ring-border ring-offset-background placeholder:text-input-placeholder focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-input-focus disabled:cursor-not-allowed disabled:opacity-70 aria-[invalid]:ring-input-invalid';
 </script>
 
-<div {...props} class="space-y-1">
-    <label for={label} aria-disabled={disabled}>{label}</label>
-    <select
-        id={label}
-        name={label}
-        aria-describedby={`${label}-error`}
-        aria-invalid={error ? true : undefined}
-        {disabled}
-        class="relative h-10 w-full appearance-none rounded-md border-0 bg-input px-3 py-2 text-sm leading-6 ring-1 ring-inset ring-border ring-offset-background placeholder:text-input-placeholder focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-input-focus disabled:cursor-not-allowed disabled:opacity-70 aria-[invalid]:ring-input-invalid"
-    >
+<div {...rest} class="space-y-1">
+    <Label for={label} aria-disabled={disabled}>{label}</Label>
+    <select id={label} name={label} {disabled} aria-describedby={`${label}-error`} aria-invalid={error ? true : undefined} class={selectStyles}>
         {#each Object.entries(options) as [key, value] (key)}
             <option value={key}>{value}</option>
         {/each}

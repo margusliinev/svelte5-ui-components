@@ -4,14 +4,14 @@
     import { ButtonSpinner } from '$components';
     import { twMerge } from 'tailwind-merge';
 
-    interface ButtonProps extends HTMLButtonAttributes {
+    interface Props extends HTMLButtonAttributes {
         children: Snippet;
+        isLoading?: boolean;
         variant?: 'plain' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-        isLoading?: boolean;
     }
 
-    let { children, variant = 'plain', size = 'md', isLoading = false, ...props }: ButtonProps = $props();
+    let { children, isLoading = false, variant = 'plain', size = 'md', ...rest }: Props = $props();
 
     let buttonVariants = {
         plain: 'bg-transparent text-foreground focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
@@ -36,7 +36,7 @@
     let buttonStyles = `${buttonCore} ${buttonVariants[variant]} ${buttonSizes[size]}`;
 </script>
 
-<button {...props} class={twMerge(buttonStyles, props.class)}>
+<button {...rest} class={twMerge(buttonStyles, rest.class)}>
     {#if isLoading && variant !== 'plain' && size !== 'icon'}
         {#if size === 'xs' || size === 'sm'}
             <ButtonSpinner size="sm" />

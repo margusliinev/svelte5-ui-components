@@ -8,7 +8,7 @@ This is a repository for custom Svelte 5 UI components that you can copy paste i
 
 - Svelte 5
 - Typescript
-- TailwindCSS
+- Tailwind CSS
 - Tailwind Merge
 
 ## Built Components
@@ -19,10 +19,11 @@ This is a repository for custom Svelte 5 UI components that you can copy paste i
 4. ButtonSpinner
 5. Card
 6. Form
-7. Label
-8. Icon
-9. Link
-10. Input
-11. InputField
-12. FieldError
+7. Icon
+8. InputField
+9. Label
+10. Link
+11. SelectField
+12. TextareaField
 13. ThemeSwitch
+14. Dropdown

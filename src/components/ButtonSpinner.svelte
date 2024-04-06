@@ -1,11 +1,11 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
 
-    interface ButtonSpinnerProps extends HTMLAttributes<HTMLDivElement> {
+    interface Props extends HTMLAttributes<HTMLDivElement> {
         size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
-    let { size = 'md', ...props }: ButtonSpinnerProps = $props();
+    let { size = 'md', ...rest }: Props = $props();
 
     let buttonSpinnerSizes = {
         xs: 'h-3 w-3 border-[2px]',
@@ -15,10 +15,10 @@
         xl: 'h-7 w-7 border-[4px]'
     };
 
-    let buttonSpinnerCore = 'inline-block animate-spin rounded-full border-background border-t-transparent';
+    let buttonSpinnerCore = 'animate-spin rounded-full border-background border-t-transparent';
     let buttonSpinnerStyles = `${buttonSpinnerCore} ${buttonSpinnerSizes[size]}`;
 </script>
 
-<div {...props} class={buttonSpinnerStyles} role="status" aria-label="loading">
+<div {...rest} class={buttonSpinnerStyles} role="status" aria-label="loading">
     <span class="sr-only">Loading...</span>
 </div>

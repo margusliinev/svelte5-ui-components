@@ -2,13 +2,13 @@
     import { Button, Icon, Link } from '$components';
     import { SidebarLinks } from '.';
 
-    interface MobileSidebarProps {
+    interface Props {
         open: boolean;
         route: string | null;
         toggleSidebar: () => void;
     }
 
-    let { route, open, toggleSidebar }: MobileSidebarProps = $props();
+    let { route, open, toggleSidebar }: Props = $props();
 </script>
 
 <div class={`fixed inset-0 bg-slate-900/80 transition-opacity duration-500 dark:bg-zinc-900/80 lg:hidden ${open ? 'z-50 scale-100 opacity-100' : '-z-50 scale-0 opacity-0'}`} aria-hidden="true"></div>

@@ -2,12 +2,12 @@
     import type { HTMLAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
 
-    interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
+    interface Props extends HTMLAttributes<HTMLSpanElement> {
         children: Snippet;
         variant: 'success' | 'warning' | 'danger' | 'info';
     }
 
-    let { children, variant = 'success', ...props }: BadgeProps = $props();
+    let { children, variant = 'success', ...rest }: Props = $props();
 
     let badgeVariants = {
         success: 'bg-success hover:bg-success-hover text-success-foreground',
@@ -15,8 +15,8 @@
         danger: 'bg-danger hover:bg-danger-hover text-danger-foreground',
         info: 'bg-info hover:bg-info-hover text-info-foreground'
     };
-    let badgeCore = 'inline-flex items-center justify-center rounded-full py-1.5 px-3 text-sm capitalize font-medium cursor-default transition-colors min-w-16';
+    let badgeCore = 'flex items-center justify-center rounded-full py-2 px-4 text-sm capitalize font-medium transition-colors cursor-default';
     let badgeStyles = `${badgeCore} ${badgeVariants[variant]}`;
 </script>
 
-<span {...props} class={badgeStyles}>{@render children()}</span>
+<span {...rest} class={badgeStyles}>{@render children()}</span>

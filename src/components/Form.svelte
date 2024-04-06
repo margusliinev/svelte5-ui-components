@@ -2,11 +2,11 @@
     import type { HTMLFormAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
 
-    interface FormProps extends HTMLFormAttributes {
+    interface Props extends HTMLFormAttributes {
         children: Snippet;
     }
 
-    let { children, ...props }: FormProps = $props();
+    let { children, ...rest }: Props = $props();
 </script>
 
-<form {...props} method="POST">{@render children()}</form>
+<form {...rest} method="POST">{@render children()}</form>

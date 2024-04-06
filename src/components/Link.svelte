@@ -3,13 +3,13 @@
     import type { Snippet } from 'svelte';
     import { twMerge } from 'tailwind-merge';
 
-    interface LinkProps extends HTMLAnchorAttributes {
+    interface Props extends HTMLAnchorAttributes {
         children: Snippet;
         variant?: 'plain' | 'primary' | 'secondary';
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
-    let { children, variant = 'plain', size = 'md', ...props }: LinkProps = $props();
+    let { children, variant = 'plain', size = 'md', ...rest }: Props = $props();
 
     let linkVariants = {
         plain: 'bg-transparent text-foreground focus-visible:ring-foreground focus-visible:ring-inset focus-visible:ring-offset-0 font-normal',
@@ -31,4 +31,4 @@
     let linkStyles = `${linkCore} ${linkVariants[variant]} ${linkSizes[size]}`;
 </script>
 
-<a {...props} class={twMerge(linkStyles, props.class)}>{@render children()}</a>
+<a {...rest} class={twMerge(linkStyles, rest.class)}>{@render children()}</a>

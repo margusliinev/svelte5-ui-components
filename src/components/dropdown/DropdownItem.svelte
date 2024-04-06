@@ -4,13 +4,13 @@
     import type { Snippet } from 'svelte';
     import { getContext } from 'svelte';
 
-    interface DropdownItemProps extends HTMLAttributes<HTMLDivElement> {
+    interface Props extends HTMLAttributes<HTMLDivElement> {
         children: Snippet;
     }
 
     const dropdown = getContext<DropdownState>('dropdown');
 
-    let { children, ...props }: DropdownItemProps = $props();
+    let { children, ...rest }: Props = $props();
 </script>
 
-<div {...props} role="menuitem" tabindex={-1} onkeydown={dropdown.handleKeyDown}>{@render children()}</div>
+<div {...rest} role="menuitem" tabindex={-1} onkeydown={dropdown.handleKeyDown}>{@render children()}</div>

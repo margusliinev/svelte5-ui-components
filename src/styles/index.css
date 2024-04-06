@@ -5,9 +5,7 @@
 @layer base {
     :root {
         --background: 200 100% 98%;
-        --background-hover: 200 100% 100%;
         --foreground: 240 5% 15%;
-        --foreground-hover: 240 10% 5%;
 
         --primary: 200 98% 35%;
         --primary-foreground: 0 0% 98%;
@@ -39,18 +37,13 @@
         --input-invalid: 0 85% 60%;
 
         --border: 240 5% 85%;
-        --border-strong: 240 5% 70%;
-
         --card: 0 0% 100%;
-
         --radius: 0.25rem;
     }
 
     [data-theme='dark'] {
         --background: 240 5% 15%;
-        --background-hover: 240 10% 5%;
         --foreground: 0 0% 95%;
-        --foreground-hover: 0 0% 100%;
 
         --primary: 200 95% 80%;
         --primary-foreground: 240 5% 15%;
@@ -82,20 +75,17 @@
         --input-invalid: 0 93% 80%;
 
         --border: 240 5% 25%;
-        --border-strong: 240 5% 35%;
-
         --card: 240 5% 20%;
+        --radius: 0.25rem;
     }
+
+    /* GLOBAL STYLES */
 
     body {
         @apply bg-background font-Inter text-foreground antialiased;
     }
 
     /* FORM RESET & STYLES */
-
-    label {
-        @apply text-sm capitalize peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
-    }
 
     input[type='datetime-local']::-webkit-calendar-picker-indicator,
     input[type='date']::-webkit-calendar-picker-indicator,
@@ -110,9 +100,9 @@
         @apply hidden border-0;
     }
     input[type='file'] {
-        @apply bg-size-1 bg-center-right bg-file-light bg-no-repeat dark:bg-file-dark;
+        @apply appearance-none bg-file-light bg-size-1 bg-center-right bg-no-repeat leading-6 dark:bg-file-dark;
     }
     select {
-        @apply bg-size-1 bg-center-right bg-arrow-light bg-no-repeat dark:bg-arrow-dark;
+        @apply appearance-none bg-arrow-light bg-size-1 bg-center-right bg-no-repeat leading-6 dark:bg-arrow-dark;
     }
 }

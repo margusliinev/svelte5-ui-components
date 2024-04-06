@@ -3,7 +3,7 @@
     import type { SVGAttributes } from 'svelte/elements';
     import icons from '../icons';
 
-    interface IconProps extends SVGAttributes<SVGElement> {
+    interface Props extends SVGAttributes<SVGElement> {
         name: string;
         fill?: string;
         stroke?: string;
@@ -11,7 +11,7 @@
         size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
-    let { name, fill = 'none', stroke = 'currentColor', strokeWidth = '2', size = 'md' }: IconProps = $props();
+    let { name, fill = 'none', stroke = 'currentColor', strokeWidth = '2', size = 'md' }: Props = $props();
 
     let iconSizes = {
         xs: '16',
