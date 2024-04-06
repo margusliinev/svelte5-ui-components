@@ -3,7 +3,6 @@
     import type { DropdownState } from './DropdownState.svelte';
     import type { Snippet } from 'svelte';
     import { getContext } from 'svelte';
-    import { twMerge } from 'tailwind-merge';
     import { Icon } from '$components';
 
     interface Props extends HTMLButtonAttributes {
@@ -21,7 +20,7 @@
 
 <button
     {...rest}
-    class={twMerge(dropdownButtonStyles, rest.class)}
+    class={`${dropdownButtonStyles} ${rest.class}`}
     aria-haspopup="menu"
     aria-expanded={dropdown.open}
     onclick={dropdown.handleClick}

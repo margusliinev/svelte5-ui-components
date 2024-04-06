@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { HTMLAnchorAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
-    import { twMerge } from 'tailwind-merge';
 
     interface Props extends HTMLAnchorAttributes {
         children: Snippet;
@@ -31,4 +30,4 @@
     let linkStyles = `${linkCore} ${linkVariants[variant]} ${linkSizes[size]}`;
 </script>
 
-<a {...rest} class={twMerge(linkStyles, rest.class)}>{@render children()}</a>
+<a {...rest} class={`${linkStyles} ${rest.class}`}>{@render children()}</a>

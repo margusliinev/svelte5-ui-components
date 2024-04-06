@@ -19,6 +19,6 @@
     let buttonSpinnerStyles = `${buttonSpinnerCore} ${buttonSpinnerSizes[size]}`;
 </script>
 
-<div {...rest} class={buttonSpinnerStyles} role="status" aria-label="loading">
+<div {...rest} class={`${buttonSpinnerStyles} ${rest.class}`} role="status" aria-label="loading">
     <span class="sr-only">Loading...</span>
 </div>

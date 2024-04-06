@@ -21,7 +21,7 @@
     let alertStyles = `${alertCore} ${alertVariants[variant]}`;
 </script>
 
-<div {...rest} role="alert" class={alertStyles}>
+<div {...rest} role="alert" class={`${alertStyles} ${rest.class}`}>
     {#if variant === 'success'}
         <Icon name="check" size="sm" />
     {:else if variant === 'warning'}

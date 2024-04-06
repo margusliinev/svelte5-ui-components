@@ -13,11 +13,11 @@
 <div class="min-h-[calc(screen - 4rem)] mx-auto w-screen-90 max-w-screen-2xl lg:w-screen-90">
     <header class="flex h-24 grid-cols-[auto_1fr] items-center justify-between lg:grid">
         <div class="w-60">
-            <Link href="/home/alert" size="icon" class="justify-start text-2xl font-black uppercase text-primary">Svelte 5 UI</Link>
+            <Link href="/home/alert" size="icon" class="!justify-start !text-2xl !font-extrabold !uppercase !text-primary">Svelte 5 UI</Link>
         </div>
         <div class="hidden items-center justify-between gap-2 lg:flex">
             <nav class="flex items-center gap-2">
-                <Link href="/home/alert" size="sm" class={`${data.route?.split('/')[1] === 'home' ? 'bg-primary/20' : ''}`}>Home</Link>
+                <Link href="/home/alert" size="sm" class={`${data.route?.split('/')[1] === 'home' ? '!bg-primary/20' : ''}`}>Home</Link>
                 <Link href="https://github.com/margusliinev/svelte5-ui-components" size="sm" target="_blank">GitHub</Link>
             </nav>
             <ThemeSwitch />

@@ -2,7 +2,6 @@
     import type { HTMLButtonAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
     import { ButtonSpinner } from '$components';
-    import { twMerge } from 'tailwind-merge';
 
     interface Props extends HTMLButtonAttributes {
         children: Snippet;
@@ -36,7 +35,7 @@
     let buttonStyles = `${buttonCore} ${buttonVariants[variant]} ${buttonSizes[size]}`;
 </script>
 
-<button {...rest} class={twMerge(buttonStyles, rest.class)}>
+<button {...rest} class={`${buttonStyles} ${rest.class}`}>
     {#if isLoading && variant !== 'plain' && size !== 'icon'}
         {#if size === 'xs' || size === 'sm'}
             <ButtonSpinner size="sm" />

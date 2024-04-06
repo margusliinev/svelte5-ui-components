@@ -11,4 +11,4 @@
     let labelStyles = 'text-sm capitalize peer-disabled:cursor-not-allowed peer-disabled:opacity-70';
 </script>
 
-<label {...rest} for={rest.for} class={labelStyles}>{@render children()}</label>
+<label {...rest} for={rest.for} class={`${labelStyles} ${rest.class}`}>{@render children()}</label>

@@ -19,4 +19,4 @@
     let badgeStyles = `${badgeCore} ${badgeVariants[variant]}`;
 </script>
 
-<span {...rest} class={badgeStyles}>{@render children()}</span>
+<span {...rest} class={`${badgeStyles} ${rest.class}`}>{@render children()}</span>

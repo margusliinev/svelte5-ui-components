@@ -1,5 +1,4 @@
 <script lang="ts">
-    /* eslint-disable */
     import type { SVGAttributes } from 'svelte/elements';
     import icons from '../icons';
 

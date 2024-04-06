@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
-    import { twMerge } from 'tailwind-merge';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
         children: Snippet;
@@ -12,4 +11,4 @@
     let cardStyles = 'h-full w-full rounded-md border border-border bg-card p-6 shadow-sm';
 </script>
 
-<div {...rest} class={twMerge(cardStyles, rest.class)}>{@render children()}</div>
+<div {...rest} class={`${cardStyles} ${rest.class}`}>{@render children()}</div>
