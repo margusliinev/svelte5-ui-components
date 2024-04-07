@@ -17,11 +17,11 @@
         danger: 'border-danger/30 text-danger bg-danger/10',
         info: 'border-info/30 text-info bg-info/10'
     };
-    let alertCore = 'text-sm w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg]:absolute';
-    let alertStyles = `${alertCore} ${alertVariants[variant]}`;
+    let coreStyles = `text-sm w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg]:absolute ${alertVariants[variant]}`;
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<div {...rest} role="alert" class={`${alertStyles} ${rest.class}`}>
+<div {...rest} role="alert" class={coreStyles + extraStyles}>
     {#if variant === 'success'}
         <Icon name="check" size="sm" />
     {:else if variant === 'warning'}

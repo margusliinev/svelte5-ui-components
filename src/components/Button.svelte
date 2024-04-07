@@ -30,12 +30,11 @@
         xl: 'h-12 px-6 text-base'
     };
 
-    let buttonCore =
-        'flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
-    let buttonStyles = `${buttonCore} ${buttonVariants[variant]} ${buttonSizes[size]}`;
+    let coreStyles = `flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none ${buttonVariants[variant]} ${buttonSizes[size]}`;
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<button {...rest} class={`${buttonStyles} ${rest.class}`}>
+<button {...rest} class={coreStyles + extraStyles}>
     {#if isLoading && variant !== 'plain' && size !== 'icon'}
         {#if size === 'xs' || size === 'sm'}
             <ButtonSpinner size="sm" />

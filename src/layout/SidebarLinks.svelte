@@ -19,5 +19,7 @@
     <SidebarLink href="/home/link" {route} {toggleSidebar}>Link</SidebarLink>
     <SidebarLink href="/home/dropdown" {route} {toggleSidebar}>Dropdown</SidebarLink>
     <SidebarHeading>forms</SidebarHeading>
-    <SidebarLink href="/home/field" {route} {toggleSidebar}>Field</SidebarLink>
+    <SidebarLink href="/home/input" {route} {toggleSidebar}>Input</SidebarLink>
+    <SidebarLink href="/home/select" {route} {toggleSidebar}>Select</SidebarLink>
+    <SidebarLink href="/home/textarea" {route} {toggleSidebar}>Textarea</SidebarLink>
 </ul>

@@ -9,7 +9,8 @@
 
     let { children, id, ...rest }: Props = $props();
 
-    let errorStyles = 'text-sm text-input-invalid';
+    let coreStyles = 'text-sm text-input-invalid';
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<div {id} {...rest} class={`${errorStyles} ${rest.class}`} role="alert">{@render children()}</div>
+<div {id} {...rest} class={coreStyles + extraStyles} role="alert">{@render children()}</div>

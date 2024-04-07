@@ -86,6 +86,12 @@ export default {
             animation: {
                 spin: 'spin 0.7s linear infinite'
             },
+            backgroundSize: {
+                'size-1': '1rem'
+            },
+            backgroundPosition: {
+                'center-right': 'center right 0.75rem'
+            },
             backgroundImage: {
                 'arrow-light':
                     "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='black'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E\")",
@@ -103,12 +109,6 @@ export default {
                     "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' %3E%3Cpath d='M14 3v4a1 1 0 0 0 1 1h4'/%3E%3Cpath d='M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M12 11v6' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M9.5 13.5l2.5 -2.5l2.5 2.5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E\")",
                 'file-dark':
                     "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' %3E%3Cpath d='M14 3v4a1 1 0 0 0 1 1h4'/%3E%3Cpath d='M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M12 11v6' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M9.5 13.5l2.5 -2.5l2.5 2.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E\")"
-            },
-            backgroundSize: {
-                'size-1': '1rem'
-            },
-            backgroundPosition: {
-                'center-right': 'center right 0.75rem'
             }
         }
     },

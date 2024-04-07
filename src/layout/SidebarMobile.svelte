@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { Button, Icon, Link } from '$components';
-    import { SidebarLinks } from '.';
+    import { Button, Icon } from '$components';
+    import { SidebarLinks, Logo } from '$layout';
 
     interface Props {
         open: boolean;
@@ -17,7 +17,7 @@
         <Icon name="close" stroke="white" />
     </Button>
     <div class="flex h-24 px-8">
-        <Link href="/home/alert" size="icon" class="text-2xl font-black uppercase text-primary">Svelte 5 UI</Link>
+        <Logo />
     </div>
     <div class="px-8">
         <SidebarLinks {route} {toggleSidebar} />

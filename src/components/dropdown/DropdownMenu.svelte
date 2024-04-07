@@ -11,13 +11,14 @@
 
     const dropdown = getContext<DropdownState>('dropdown');
 
-    let dropdownMenuStyles = 'grid absolute top-12 right-0 bg-background ring-1 ring-border ring-inset rounded-md z-50 w-max overflow-hidden';
-
     let { children, ...rest }: Props = $props();
+
+    let coreStyles = 'grid absolute top-12 right-0 bg-background ring-1 ring-border ring-inset rounded-md z-50 w-max overflow-hidden';
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
 {#if dropdown.open}
-    <div {...rest} class={`${dropdownMenuStyles} ${rest.class}`} role="menu" transition:fly|local={{ duration: 100 }} onfocusout={dropdown.handleBlur}>
+    <div {...rest} class={coreStyles + extraStyles} role="menu" transition:fly|local={{ duration: 100 }} onfocusout={dropdown.handleBlur}>
         {@render children()}
     </div>
 {/if}

@@ -15,10 +15,10 @@
         xl: 'h-7 w-7 border-[4px]'
     };
 
-    let buttonSpinnerCore = 'animate-spin rounded-full border-background border-t-transparent';
-    let buttonSpinnerStyles = `${buttonSpinnerCore} ${buttonSpinnerSizes[size]}`;
+    let coreStyles = `animate-spin rounded-full border-background border-t-transparent ${buttonSpinnerSizes[size]}`;
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<div {...rest} class={`${buttonSpinnerStyles} ${rest.class}`} role="status" aria-label="loading">
+<div {...rest} class={coreStyles + extraStyles} role="status" aria-label="loading">
     <span class="sr-only">Loading...</span>
 </div>

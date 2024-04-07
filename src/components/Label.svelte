@@ -8,7 +8,8 @@
 
     let { children, ...rest }: Props = $props();
 
-    let labelStyles = 'text-sm capitalize peer-disabled:cursor-not-allowed peer-disabled:opacity-70';
+    let coreStyles = 'text-sm capitalize peer-disabled:cursor-not-allowed peer-disabled:opacity-70';
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<label {...rest} for={rest.for} class={`${labelStyles} ${rest.class}`}>{@render children()}</label>
+<label {...rest} for={rest.for} class={coreStyles + extraStyles}>{@render children()}</label>

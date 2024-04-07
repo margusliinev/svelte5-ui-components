@@ -25,9 +25,8 @@
         xl: 'h-12 px-6 text-base'
     };
 
-    let linkCore =
-        'flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none';
-    let linkStyles = `${linkCore} ${linkVariants[variant]} ${linkSizes[size]}`;
+    let coreStyles = `flex justify-center items-center gap-1 capitalize rounded-md transition-colors ring-offset-background focus-visible:outline-none focus-visible:ring-2 disabled:opacity-50 disabled:pointer-events-none ${linkVariants[variant]} ${linkSizes[size]}`;
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<a {...rest} class={`${linkStyles} ${rest.class}`}>{@render children()}</a>
+<a {...rest} class={coreStyles + extraStyles}>{@render children()}</a>

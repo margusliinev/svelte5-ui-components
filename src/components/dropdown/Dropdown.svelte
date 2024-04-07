@@ -14,7 +14,8 @@
 
     let { children, ...rest }: Props = $props();
 
-    let dropdownStyles = 'relative';
+    let coreStyles = 'relative';
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<div {...rest} class={`${dropdownStyles} ${rest.class}`}>{@render children()}</div>
+<div {...rest} class={coreStyles + extraStyles}>{@render children()}</div>
