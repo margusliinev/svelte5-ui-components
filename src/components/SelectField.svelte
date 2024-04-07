@@ -1,12 +1,12 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
-    import { Label } from '$components';
+    import { FieldError, Label } from '$components';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
-        label: string;
-        error: string;
-        disabled?: boolean;
         options: { [value: string | number]: string | number } | string[] | string;
+        label: string;
+        error?: string;
+        disabled?: boolean;
     }
 
     let { label, error = '', disabled = false, options, ...rest }: Props = $props();
@@ -22,9 +22,7 @@
             <option value={key}>{value}</option>
         {/each}
     </select>
-    <span id={`${label}-error`} class="block text-sm text-input-invalid">
-        {#if error}
-            {error}
-        {/if}
-    </span>
+    {#if error}
+        <FieldError id={`${label}-error`}>{error}</FieldError>
+    {/if}
 </div>

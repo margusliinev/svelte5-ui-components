@@ -1,10 +1,10 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
-    import { Label } from '$components';
+    import { Label, FieldError } from '$components';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
         label: string;
-        error: string;
+        error?: string;
         required?: boolean;
         disabled?: boolean;
         minlength?: number;
@@ -35,9 +35,7 @@
         class={textareaStyles}
         bind:value
     />
-    <span id={`${label}-error`} class="block text-sm text-input-invalid">
-        {#if error}
-            {error}
-        {/if}
-    </span>
+    {#if error}
+        <FieldError id={`${label}-error`}>{error}</FieldError>
+    {/if}
 </div>
