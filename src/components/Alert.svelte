@@ -4,7 +4,7 @@
     import { Icon } from '$components';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
-        children: Snippet;
+        children?: Snippet;
         variant: 'success' | 'warning' | 'danger' | 'info';
         title?: string;
     }
@@ -34,5 +34,5 @@
     {#if title}
         <h5 class="mb-1 font-medium capitalize">{title}</h5>
     {/if}
-    <p>{@render children()}</p>
+    <p>{@render children?.()}</p>
 </div>

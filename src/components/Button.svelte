@@ -4,7 +4,7 @@
     import { ButtonSpinner } from '$components';
 
     interface Props extends HTMLButtonAttributes {
-        children: Snippet;
+        children?: Snippet;
         isLoading?: boolean;
         variant?: 'plain' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -42,6 +42,6 @@
             <ButtonSpinner size="md" />
         {/if}
     {:else}
-        {@render children()}
+        {@render children?.()}
     {/if}
 </button>

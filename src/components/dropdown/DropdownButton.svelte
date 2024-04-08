@@ -6,7 +6,7 @@
     import { Icon } from '$components';
 
     interface Props extends HTMLButtonAttributes {
-        children: Snippet;
+        children?: Snippet;
         chevron?: boolean;
     }
 
@@ -20,7 +20,7 @@
 </script>
 
 <button {...rest} class={coreStyles + extraStyles} aria-haspopup="menu" aria-expanded={dropdown.open} onclick={dropdown.handleClick} onkeydown={dropdown.handleKeyDown} onblur={dropdown.handleBlur}>
-    {@render children()}
+    {@render children?.()}
     {#if chevron}
         {#if dropdown.open}
             <Icon name="chevron-up" size="xs" />

@@ -3,7 +3,7 @@
     import type { Snippet } from 'svelte';
 
     interface Props extends HTMLLabelAttributes {
-        children: Snippet;
+        children?: Snippet;
     }
 
     let { children, ...rest }: Props = $props();
@@ -12,4 +12,4 @@
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<label {...rest} for={rest.for} class={coreStyles + extraStyles}>{@render children()}</label>
+<label {...rest} for={rest.for} class={coreStyles + extraStyles}>{@render children?.()}</label>

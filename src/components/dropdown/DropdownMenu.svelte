@@ -6,7 +6,7 @@
     import { fly } from 'svelte/transition';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
-        children: Snippet;
+        children?: Snippet;
     }
 
     const dropdown = getContext<DropdownState>('dropdown');
@@ -19,6 +19,6 @@
 
 {#if dropdown.open}
     <div {...rest} class={coreStyles + extraStyles} role="menu" transition:fly|local={{ duration: 100 }} onfocusout={dropdown.handleBlur}>
-        {@render children()}
+        {@render children?.()}
     </div>
 {/if}

@@ -3,7 +3,7 @@
     import type { Snippet } from 'svelte';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
-        children: Snippet;
+        children?: Snippet;
     }
 
     let { children, ...rest }: Props = $props();
@@ -12,4 +12,4 @@
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<div {...rest} class={coreStyles + extraStyles}>{@render children()}</div>
+<div {...rest} class={coreStyles + extraStyles}>{@render children?.()}</div>

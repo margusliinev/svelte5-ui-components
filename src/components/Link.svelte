@@ -3,7 +3,7 @@
     import type { Snippet } from 'svelte';
 
     interface Props extends HTMLAnchorAttributes {
-        children: Snippet;
+        children?: Snippet;
         variant?: 'plain' | 'primary' | 'secondary';
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
@@ -29,4 +29,4 @@
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<a {...rest} class={coreStyles + extraStyles}>{@render children()}</a>
+<a {...rest} class={coreStyles + extraStyles}>{@render children?.()}</a>
