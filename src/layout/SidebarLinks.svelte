@@ -21,6 +21,7 @@
     <SidebarLink href="/home/card" {route} {toggleSidebar}>Card</SidebarLink>
     <SidebarLink href="/home/icon" {route} {toggleSidebar}>Icon</SidebarLink>
     <SidebarLink href="/home/link" {route} {toggleSidebar}>Link</SidebarLink>
+    <SidebarLink href="/home/modal" {route} {toggleSidebar}>Modal</SidebarLink>
     <SidebarLink href="/home/dropdown" {route} {toggleSidebar}>Dropdown</SidebarLink>
     <SidebarHeading class="mt-2">forms</SidebarHeading>
     <SidebarLink href="/home/input" {route} {toggleSidebar}>Input</SidebarLink>
