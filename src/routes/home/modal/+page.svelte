@@ -1,5 +1,9 @@
 <script lang="ts">
-    import { Modal } from '$components';
+    import { Button, Modal } from '$components';
+
+    let isModalOpen = $state(false);
 </script>
 
-<Modal open={true}>Test</Modal>
+<Button onclick={() => (isModalOpen = true)}>Open Modal</Button>
+
+<Modal bind:open={isModalOpen}>Test</Modal>

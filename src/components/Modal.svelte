@@ -1,45 +1,50 @@
 <script lang="ts">
     import type { HTMLDialogAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
+    import { Button, Icon } from '$components';
 
     interface Props extends HTMLDialogAttributes {
         children?: Snippet;
         open: boolean;
     }
 
-    let { children, open, ...rest }: Props = $props();
+    let { children, open = $bindable(), ...rest }: Props = $props();
 
-    let dialog = $state(null as HTMLDialogElement | null);
+    let dialog = $state<HTMLDialogElement | null>(null);
 
     $effect(() => {
-        if (dialog) {
-            dialog.showModal();
-        }
+        if (open) dialog?.showModal();
+        else dialog?.close();
     });
+
+    let coreStyles = 'bg-background text-foreground w-full max-w-sm rounded-lg p-6 shadow-xl';
+    let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-{#if open}
-    <dialog {...rest} bind:this={dialog}>
-        {@render children?.()}
-    </dialog>
-{/if}
+<dialog {...rest} bind:this={dialog} class={coreStyles + extraStyles} onclose={() => (open = false)}>
+    <Button variant="plain" size="icon" class="absolute right-4 top-4" onclick={() => (open = false)}>
+        <Icon name="close" />
+    </Button>
+    {@render children?.()}
+</dialog>
 
 <style>
     dialog {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        border: none;
         animation: fade-out 0.2s ease-in;
     }
+
     dialog[open] {
         opacity: 100;
         animation: fade-in 0.3s ease-out;
     }
 
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    dialog[open]::backdrop {
+        animation: backdrop-fade-in 0.2s ease-out;
+    }
     @keyframes fade-in {
         0% {
             opacity: 0;
@@ -63,6 +68,16 @@
             opacity: 0;
             transform: scale(0.95);
             display: none;
+        }
+    }
+
+    @keyframes backdrop-fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
         }
     }
 </style>
