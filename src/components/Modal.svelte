@@ -17,7 +17,7 @@
         else dialog?.close();
     });
 
-    let coreStyles = 'bg-background text-foreground w-full max-w-sm rounded-lg p-6 shadow-xl fixed inset-0';
+    let coreStyles = 'bg-card text-foreground w-full max-w-xl rounded-lg p-6 fixed inset-0 focus:outline-none';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
