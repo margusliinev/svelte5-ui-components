@@ -1,8 +1,8 @@
 <script lang="ts">
-    import { Form, InputField } from '$components';
+    import { InputField } from '$components';
 </script>
 
-<Form class="grid gap-4 md:grid-cols-2">
+<form class="grid gap-4 md:grid-cols-2">
     <div class="grid gap-2">
         <InputField type="text" label="text" />
         <InputField type="email" label="email" />
@@ -19,4 +19,4 @@
         <InputField type="time" label="time" />
         <InputField type="url" label="url" />
     </div>
-</Form>
+</form>

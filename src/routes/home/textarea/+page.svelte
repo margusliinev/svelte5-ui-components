@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { Form, TextareaField } from '$components';
+    import { TextareaField } from '$components';
 </script>
 
-<Form class="max-w-lg">
+<form class="max-w-lg">
     <TextareaField label="Textarea" />
-</Form>
+</form>

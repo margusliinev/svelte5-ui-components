@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Form, SelectField } from '$components';
+    import { SelectField } from '$components';
     let users = [
         { id: 1, name: 'Svelte' },
         { id: 2, name: 'React' },
@@ -9,10 +9,10 @@
     ];
 </script>
 
-<Form class="max-w-sm">
+<form class="max-w-sm">
     <SelectField label="Frameworks">
         {#each users as user (user.id)}
             <option value={user.id}>{user.name}</option>
         {/each}
     </SelectField>
-</Form>
+</form>

@@ -1,6 +1,5 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
-    import { Label, FieldError } from '$components';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
         type: 'text' | 'email' | 'password' | 'search' | 'datetime-local' | 'date' | 'month' | 'week' | 'time' | 'tel' | 'url' | 'number';
@@ -21,9 +20,9 @@
 </script>
 
 <div {...rest} class={coreStyles + extraStyles}>
-    <Label for={label} aria-disabled={disabled}>{label}</Label>
+    <label for={label} aria-disabled={disabled}>{label}</label>
     <input id={label} name={label} {type} {required} {disabled} {minlength} {maxlength} {placeholder} aria-describedby={`${label}-error`} aria-invalid={error ? true : undefined} class={inputStyles} />
     {#if error}
-        <FieldError id={`${label}-error`}>{error}</FieldError>
+        <div id={`${label}-error`} role="alert">{error}</div>
     {/if}
 </div>

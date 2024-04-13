@@ -61,12 +61,6 @@ export default {
                     foreground: 'hsl(var(--info-foreground) / <alpha-value>)',
                     hover: 'hsl(var(--info-hover) / <alpha-value>)'
                 },
-                input: {
-                    DEFAULT: 'hsl(var(--input) / <alpha-value>)',
-                    focus: 'hsl(var(--input-focus) / <alpha-value>)',
-                    placeholder: 'hsl(var(--input-placeholder) / <alpha-value>)',
-                    invalid: 'hsl(var(--input-invalid) / <alpha-value>)'
-                },
                 border: 'hsl(var(--border) / <alpha-value>)',
                 card: 'hsl(var(--card) / <alpha-value>)'
             },

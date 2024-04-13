@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
-    import { FieldError, Label } from '$components';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
         children?: Snippet;
@@ -19,11 +18,11 @@
 </script>
 
 <div {...rest} class={coreStyles + extraStyles}>
-    <Label for={label} aria-disabled={disabled}>{label}</Label>
+    <label for={label} aria-disabled={disabled}>{label}</label>
     <select id={label} name={label} {disabled} {placeholder} aria-describedby={`${label}-error`} aria-invalid={error ? true : undefined} class={selectStyles}>
         {@render children?.()}
     </select>
     {#if error}
-        <FieldError id={`${label}-error`}>{error}</FieldError>
+        <div id={`${label}-error`} role="alert">{error}</div>
     {/if}
 </div>

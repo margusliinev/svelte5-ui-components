@@ -1,6 +1,5 @@
 <script lang="ts">
     import type { HTMLAttributes } from 'svelte/elements';
-    import { Label, FieldError } from '$components';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
         label: string;
@@ -21,7 +20,7 @@
 </script>
 
 <div {...rest} class={coreStyles + extraStyles}>
-    <Label for={label} aria-disabled={disabled}>{label}</Label>
+    <label for={label} aria-disabled={disabled}>{label}</label>
     <span class="absolute right-0 text-sm">{value?.length ?? 0} / {maxlength}</span>
     <textarea
         id={label}
@@ -37,6 +36,6 @@
         bind:value
     />
     {#if error}
-        <FieldError id={`${label}-error`}>{error}</FieldError>
+        <div id={`${label}-error`} role="alert">{error}</div>
     {/if}
 </div>
