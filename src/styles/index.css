@@ -59,6 +59,6 @@
     }
 
     textarea {
-        @apply min-h-24 w-full rounded-md border-border focus:border-2 focus:border-primary focus:ring-0;
+        @apply min-h-24 w-full rounded-md border-border focus:border-2 focus:border-primary focus:ring-0 disabled:cursor-not-allowed aria-[invalid]:border-danger;
     }
 }
