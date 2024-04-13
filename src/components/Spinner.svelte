@@ -2,12 +2,13 @@
     import type { HTMLAttributes } from 'svelte/elements';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
-        size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+        size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
     let { size = 'md', ...rest }: Props = $props();
 
     let buttonSpinnerSizes = {
+        icon: 'h-4 w-4 border-[2px]',
         xs: 'h-4 w-4 border-[2px]',
         sm: 'h-5 w-5 border-[3px]',
         md: 'h-5 w-5 border-[3px]',
