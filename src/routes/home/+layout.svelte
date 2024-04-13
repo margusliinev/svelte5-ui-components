@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Button, Card, Icon, Link, ThemeSwitch } from '$components';
+    import { Button, Card, Icon, Link } from '$components';
     import { Logo, SidebarDesktop, SidebarMobile } from '$layout';
     let { children, data } = $props();
 
@@ -20,7 +20,6 @@
                 <Link href="/home/alert" size="sm" class={`${data.route?.split('/')[1] === 'home' ? '!bg-primary/20' : ''}`}>Home</Link>
                 <Link href="https://github.com/margusliinev/svelte5-ui-components" size="sm" target="_blank">GitHub</Link>
             </nav>
-            <ThemeSwitch />
         </div>
         <Button size="icon" class="lg:hidden" aria-label="menu" onclick={toggleSidebar}>
             <Icon name="menu" />

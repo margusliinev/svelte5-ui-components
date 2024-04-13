@@ -8,7 +8,7 @@
 
     let { children, ...rest }: Props = $props();
 
-    let coreStyles = 'mb-2 text-xs font-medium uppercase text-secondary';
+    let coreStyles = 'mb-2 text-xs font-medium uppercase text-secondary-foreground';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 

@@ -4,16 +4,16 @@
 
 @layer base {
     :root {
-        --background: 200 100% 98%;
-        --foreground: 240 5% 15%;
+        --background: 0 0% 100%;
+        --foreground: 240 10% 5%;
 
-        --primary: 200 98% 35%;
+        --primary: 240 5% 10%;
         --primary-foreground: 0 0% 98%;
-        --primary-hover: 200 98% 30%;
+        --primary-hover: 240 5% 0%;
 
-        --secondary: 240 5% 35%;
-        --secondary-foreground: 0 0% 98%;
-        --secondary-hover: 240 5% 25%;
+        --secondary: 240 5% 95%;
+        --secondary-foreground: 240 5% 10%;
+        --secondary-hover: 240 5% 90%;
 
         --success: 160 93% 30%;
         --success-foreground: 0 0% 98%;
@@ -37,72 +37,29 @@
         --input-invalid: 0 85% 60%;
 
         --border: 240 5% 85%;
-        --card: 0 0% 100%;
         --radius: 0.25rem;
     }
-
-    [data-theme='dark'] {
-        --background: 240 5% 15%;
-        --foreground: 0 0% 95%;
-
-        --primary: 200 95% 80%;
-        --primary-foreground: 240 5% 15%;
-        --primary-hover: 200 95% 90%;
-
-        --secondary: 240 5% 85%;
-        --secondary-foreground: 240 5% 15%;
-        --secondary-hover: 240 5% 95%;
-
-        --success: 160 65% 50%;
-        --success-foreground: 240 5% 15%;
-        --success-hover: 160 65% 70%;
-
-        --warning: 50 95% 50%;
-        --warning-foreground: 240 5% 15%;
-        --warning-hover: 50 95% 70%;
-
-        --danger: 0 90% 70%;
-        --danger-foreground: 240 5% 15%;
-        --danger-hover: 0 90% 80%;
-
-        --info: 200 90% 70%;
-        --info-foreground: 240 5% 15%;
-        --info-hover: 200 90% 80%;
-
-        --input: 240 5% 15%;
-        --input-focus: 200 95% 60%;
-        --input-placeholder: 240 5% 65%;
-        --input-invalid: 0 93% 80%;
-
-        --border: 240 5% 25%;
-        --card: 240 5% 20%;
-        --radius: 0.25rem;
-    }
-
-    /* GLOBAL STYLES */
-
     body {
         @apply bg-background font-Inter text-foreground antialiased;
     }
 
-    /* FORM RESET & STYLES */
-
-    input[type='datetime-local']::-webkit-calendar-picker-indicator,
-    input[type='date']::-webkit-calendar-picker-indicator,
-    input[type='month']::-webkit-calendar-picker-indicator,
-    input[type='week']::-webkit-calendar-picker-indicator {
-        @apply absolute right-3 bg-calendar-light dark:bg-calendar-dark;
-    }
-    input[type='time']::-webkit-calendar-picker-indicator {
-        @apply absolute right-2.5 bg-clock-light dark:bg-clock-dark;
-    }
-    input[type='file']::-webkit-file-upload-button {
-        @apply hidden border-0;
-    }
-    input[type='file'] {
-        @apply appearance-none bg-file-light bg-size-1 bg-center-right bg-no-repeat leading-6 dark:bg-file-dark;
-    }
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='url'],
+    input[type='number'],
+    input[type='date'],
+    input[type='time'],
+    input[type='datetime-local'],
+    input[type='month'],
+    input[type='week'],
     select {
-        @apply appearance-none bg-arrow-light bg-size-1 bg-center-right bg-no-repeat leading-6 dark:bg-arrow-dark;
+        @apply h-10 w-full rounded-md border-0 text-sm ring-1 !ring-inset ring-border focus:ring-2 focus:ring-primary disabled:cursor-not-allowed aria-[invalid]:ring-danger;
+    }
+
+    textarea {
+        @apply min-h-24 w-full rounded-md border-border focus:border-2 focus:border-primary focus:ring-0;
     }
 }

@@ -8,8 +8,8 @@
         <InputField type="email" label="email" />
         <InputField type="password" label="password" />
         <InputField type="search" label="search" />
-        <InputField type="text" label="disabled" disabled />
-        <InputField type="text" label="placeholder" placeholder="Placeholder" />
+        <InputField type="number" label="number" />
+        <InputField type="tel" label="tel" />
     </div>
     <div class="grid gap-2">
         <InputField type="datetime-local" label="datetime" />
@@ -17,6 +17,6 @@
         <InputField type="month" label="month" />
         <InputField type="week" label="week" />
         <InputField type="time" label="time" />
-        <InputField type="file" label="file" />
+        <InputField type="url" label="url" />
     </div>
 </Form>
