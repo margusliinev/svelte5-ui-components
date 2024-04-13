@@ -75,9 +75,6 @@ export default {
                 '2xl': 'calc(var(--radius) + 12px)',
                 '3xl': 'calc(var(--radius) + 20px)',
                 full: '9999px'
-            },
-            animation: {
-                spin: 'spin 0.7s linear infinite'
             }
         }
     },
