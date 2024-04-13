@@ -36,11 +36,6 @@ export default {
                     foreground: 'hsl(var(--primary-foreground) / <alpha-value>)',
                     hover: 'hsl(var(--primary-hover) / <alpha-value>)'
                 },
-                secondary: {
-                    DEFAULT: 'hsl(var(--secondary)/ <alpha-value>)',
-                    foreground: 'hsl(var(--secondary-foreground)/ <alpha-value>)',
-                    hover: 'hsl(var(--secondary-hover)/ <alpha-value>)'
-                },
                 success: {
                     DEFAULT: 'hsl(var(--success)/ <alpha-value>)',
                     foreground: 'hsl(var(--success-foreground)/ <alpha-value>)',
@@ -75,6 +70,9 @@ export default {
                 '2xl': 'calc(var(--radius) + 12px)',
                 '3xl': 'calc(var(--radius) + 20px)',
                 full: '9999px'
+            },
+            animation: {
+                spin: 'spin 0.7s linear infinite'
             }
         }
     },
