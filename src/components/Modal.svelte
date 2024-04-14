@@ -17,8 +17,7 @@
         else dialog?.close();
     });
 
-    let coreStyles =
-        'fixed inset-0 bg-background text-foreground w-full max-w-xl rounded-md p-6 animate-fade-out open:animate-fade-in backdrop:open:animate-backdrop-fade backdrop:backdrop-brightness-50 outline-none';
+    let coreStyles = 'fixed inset-0 bg-card text-foreground w-screen-90 max-w-xl rounded-md p-6 open:animate-fade-in backdrop:animate-backdrop-fade backdrop:backdrop-brightness-50 outline-none';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 

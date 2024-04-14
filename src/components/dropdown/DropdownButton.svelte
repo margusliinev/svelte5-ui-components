@@ -15,7 +15,7 @@
     let { children, chevron = false, ...rest }: Props = $props();
 
     let coreStyles =
-        'flex justify-center items-center gap-1 capitalize rounded-md h-10 px-5 text-sm ring-1 ring-border ring-inset bg-background font-medium focus:ring-foreground focus:outline-none focus:ring-2';
+        'flex justify-center items-center gap-1 capitalize rounded-md h-10 px-5 text-sm ring-1 ring-border ring-inset bg-card font-medium focus:ring-foreground focus:outline-none focus:ring-2';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 

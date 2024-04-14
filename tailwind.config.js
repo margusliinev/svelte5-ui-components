@@ -78,12 +78,12 @@ export default {
             },
             keyframes: {
                 'fade-in': {
-                    '0%': { opacity: '0', transform: 'scale(0.95)', display: 'none' },
-                    '100%': { opacity: '1', display: 'block' }
+                    '0%': { opacity: '0', transform: 'scale(0.95)' },
+                    '100%': { opacity: '1' }
                 },
                 'fade-out': {
-                    '0%': { opacity: '1', display: 'block' },
-                    '100%': { opacity: '0', transform: 'scale(0.95)', display: 'none' }
+                    '0%': { opacity: '1' },
+                    '100%': { opacity: '0', transform: 'scale(0.95)' }
                 },
                 'backdrop-fade': {
                     '0%': { opacity: '0' },
@@ -93,8 +93,8 @@ export default {
             animation: {
                 spin: 'spin 0.7s linear infinite',
                 'fade-in': 'fade-in 0.3s ease-out',
-                'fade-out': 'fade-out 0.2s ease-in',
-                'backdrop-fade': 'backdrop-fade 0.3s ease-out'
+                'fade-out': 'fade-out 0.3s ease-in',
+                'backdrop-fade': 'backdrop-fade 0.2s ease-out'
             },
             boxShadow: {
                 card: '0 0 1px 1px rgba(0, 0, 0, 0.05) !important'

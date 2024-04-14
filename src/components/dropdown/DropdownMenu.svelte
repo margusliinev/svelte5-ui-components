@@ -13,7 +13,7 @@
 
     let { children, ...rest }: Props = $props();
 
-    let coreStyles = 'grid absolute top-12 right-0 bg-background ring-1 ring-border ring-inset rounded-md z-50 w-max overflow-hidden';
+    let coreStyles = 'grid absolute top-12 right-0 bg-card ring-1 ring-border ring-inset rounded-md z-50 w-max overflow-hidden';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
