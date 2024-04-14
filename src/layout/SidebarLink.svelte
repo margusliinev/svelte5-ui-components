@@ -15,6 +15,6 @@
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
-<a {...rest} {href} class={coreStyles + extraStyles + `${route === href ? ' bg-primary/20' : ''}`} onclick={toggleSidebar} role="button" tabindex="0">
+<a {...rest} {href} class={coreStyles + extraStyles + `${route === href ? ' bg-foreground/20' : ''}`} onclick={toggleSidebar} role="button" tabindex="0">
     {@render children()}
 </a>

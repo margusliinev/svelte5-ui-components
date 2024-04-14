@@ -6,7 +6,7 @@
     interface Props extends HTMLButtonAttributes {
         children?: Snippet;
         isLoading?: boolean;
-        variant?: 'default' | 'primary' | 'success' | 'warning' | 'danger';
+        variant?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
@@ -15,6 +15,7 @@
     let buttonVariants = {
         default: 'focus-visible:ring-foreground',
         primary: 'bg-primary text-primary-foreground ring-offset-2 font-medium focus-visible:ring-primary hover:bg-primary-hover',
+        secondary: 'bg-secondary text-secondary-foreground ring-offset-2 font-medium focus-visible:ring-secondary hover:bg-secondary-hover',
         success: 'bg-success text-success-foreground ring-offset-2 font-medium focus-visible:ring-success hover:bg-success-hover',
         warning: 'bg-warning text-warning-foreground ring-offset-2 font-medium focus-visible:ring-warning hover:bg-warning-hover',
         danger: 'bg-danger text-danger-foreground ring-offset-2 font-medium focus-visible:ring-danger hover:bg-danger-hover'

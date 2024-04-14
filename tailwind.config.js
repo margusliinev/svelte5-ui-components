@@ -36,6 +36,11 @@ export default {
                     foreground: 'hsl(var(--primary-foreground) / <alpha-value>)',
                     hover: 'hsl(var(--primary-hover) / <alpha-value>)'
                 },
+                secondary: {
+                    DEFAULT: 'hsl(var(--secondary) / <alpha-value>)',
+                    foreground: 'hsl(var(--secondary-foreground) / <alpha-value>)',
+                    hover: 'hsl(var(--secondary-hover) / <alpha-value>)'
+                },
                 success: {
                     DEFAULT: 'hsl(var(--success)/ <alpha-value>)',
                     foreground: 'hsl(var(--success-foreground)/ <alpha-value>)',

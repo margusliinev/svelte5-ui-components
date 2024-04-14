@@ -4,7 +4,7 @@
 
     interface Props extends HTMLAnchorAttributes {
         children?: Snippet;
-        variant?: 'default' | 'primary';
+        variant?: 'default' | 'primary' | 'secondary';
         size?: 'icon' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 
@@ -12,7 +12,8 @@
 
     let linkVariants = {
         default: 'focus-visible:ring-foreground',
-        primary: 'bg-primary text-primary-foreground ring-offset-2 font-medium focus-visible:ring-primary hover:bg-primary-hover'
+        primary: 'bg-primary text-primary-foreground ring-offset-2 font-medium focus-visible:ring-primary hover:bg-primary-hover',
+        secondary: 'bg-secondary text-secondary-foreground ring-offset-2 font-medium focus-visible:ring-secondary hover:bg-secondary-hover'
     };
 
     let linkSizes = {

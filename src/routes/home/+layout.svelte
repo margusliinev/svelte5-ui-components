@@ -17,7 +17,7 @@
         </div>
         <div class="hidden items-center justify-between gap-2 lg:flex">
             <nav class="flex items-center gap-2">
-                <Link href="/home/alert" size="sm" class={`${data.route?.split('/')[1] === 'home' ? 'bg-primary/20' : ''}`}>Home</Link>
+                <Link href="/home/alert" size="sm" class={`${data.route?.split('/')[1] === 'home' ? 'bg-foreground/20' : ''}`}>Home</Link>
                 <Link href="https://github.com/margusliinev/svelte5-ui-components" size="sm" target="_blank">GitHub</Link>
             </nav>
         </div>

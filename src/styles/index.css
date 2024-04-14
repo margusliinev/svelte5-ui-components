@@ -7,9 +7,13 @@
         --background: 0 0% 100%;
         --foreground: 240 10% 5%;
 
-        --primary: 240 5% 10%;
+        --primary: 20 90% 45%;
         --primary-foreground: 0 0% 98%;
-        --primary-hover: 240 5% 0%;
+        --primary-hover: 20 90% 40%;
+
+        --secondary: 0 0% 25%;
+        --secondary-foreground: 0 0% 98%;
+        --secondary-hover: 0 0% 20%;
 
         --success: 160 93% 30%;
         --success-foreground: 0 0% 98%;
@@ -25,7 +29,7 @@
 
         --info: 200 95% 40%;
         --info-foreground: 0 0% 98%;
-        --info-hover: 200 95% 50%;
+        --info-hover: 200 95% 35%;
 
         --border: 240 5% 85%;
         --radius: 0.25rem;
