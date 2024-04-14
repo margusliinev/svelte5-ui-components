@@ -11,7 +11,7 @@
     let { children, variant = 'default', size = 'md', ...rest }: Props = $props();
 
     let linkVariants = {
-        default: 'focus-visible:ring-foreground',
+        default: 'focus-visible:ring-foreground focus-visible:ring-inset',
         primary: 'bg-primary text-primary-foreground ring-offset-2 font-medium focus-visible:ring-primary hover:bg-primary-hover',
         secondary: 'bg-secondary text-secondary-foreground ring-offset-2 font-medium focus-visible:ring-secondary hover:bg-secondary-hover'
     };
