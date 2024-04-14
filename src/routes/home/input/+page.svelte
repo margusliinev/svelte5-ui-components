@@ -1,0 +1,22 @@
+<script lang="ts">
+    import { InputField } from '$components';
+</script>
+
+<form class="grid gap-4 md:grid-cols-2">
+    <div class="grid gap-2">
+        <InputField type="text" label="text" />
+        <InputField type="email" label="email" />
+        <InputField type="password" label="password" />
+        <InputField type="search" label="search" />
+        <InputField type="number" label="number" />
+        <InputField type="tel" label="tel" />
+    </div>
+    <div class="grid gap-2">
+        <InputField type="datetime-local" label="datetime" />
+        <InputField type="date" label="date" />
+        <InputField type="month" label="month" />
+        <InputField type="week" label="week" />
+        <InputField type="time" label="time" />
+        <InputField type="url" label="url" />
+    </div>
+</form>

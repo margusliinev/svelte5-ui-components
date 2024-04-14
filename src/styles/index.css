@@ -46,19 +46,19 @@
     input[type='email'],
     input[type='password'],
     input[type='search'],
+    input[type='number'],
     input[type='tel'],
     input[type='url'],
-    input[type='number'],
-    input[type='date'],
-    input[type='time'],
     input[type='datetime-local'],
+    input[type='date'],
     input[type='month'],
     input[type='week'],
+    input[type='time'],
     select {
         @apply h-10 w-full rounded-md border-0 text-sm ring-1 !ring-inset ring-border focus:ring-2 focus:ring-primary disabled:cursor-not-allowed aria-[invalid]:ring-danger;
     }
 
     textarea {
-        @apply min-h-24 w-full rounded-md border-border focus:border-2 focus:border-primary focus:ring-0 disabled:cursor-not-allowed aria-[invalid]:border-danger;
+        @apply min-h-24 w-full rounded-md border-border text-sm focus:border-2 focus:border-primary focus:ring-0 disabled:cursor-not-allowed aria-[invalid]:border-danger;
     }
 }

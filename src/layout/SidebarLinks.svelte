@@ -23,4 +23,7 @@
     <li><SidebarLink href="/home/modal" {route} {toggleSidebar}>Modal</SidebarLink></li>
     <li><SidebarLink href="/home/dropdown" {route} {toggleSidebar}>Dropdown</SidebarLink></li>
     <SidebarHeading class="mt-2">forms</SidebarHeading>
+    <li><SidebarLink href="/home/input" {route} {toggleSidebar}>Input</SidebarLink></li>
+    <li><SidebarLink href="/home/select" {route} {toggleSidebar}>Select</SidebarLink></li>
+    <li><SidebarLink href="/home/textarea" {route} {toggleSidebar}>Textarea</SidebarLink></li>
 </ul>
