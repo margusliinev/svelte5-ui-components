@@ -5,11 +5,11 @@
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
         children?: Snippet;
-        variant: 'success' | 'warning' | 'danger' | 'info';
+        variant?: 'success' | 'warning' | 'danger' | 'info';
         title?: string;
     }
 
-    let { children, variant = 'success', title, ...rest }: Props = $props();
+    let { children, variant = 'danger', title, ...rest }: Props = $props();
 
     let alertVariants = {
         success: 'border-success/40 text-success-hover bg-success/20',

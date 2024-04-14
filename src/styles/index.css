@@ -32,6 +32,7 @@
         --info-hover: 200 95% 35%;
 
         --border: 240 5% 85%;
+        --card: 0 0% 100%;
         --radius: 0.25rem;
     }
     body {

@@ -7,7 +7,7 @@
         variant: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info';
     }
 
-    let { children, variant = 'success', ...rest }: Props = $props();
+    let { children, variant = 'primary', ...rest }: Props = $props();
 
     let badgeVariants = {
         primary: 'bg-primary hover:bg-primary-hover text-primary-foreground',

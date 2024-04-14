@@ -8,7 +8,7 @@
 
     let { children, ...rest }: Props = $props();
 
-    let coreStyles = 'h-full w-full rounded-md border border-border bg-card p-6 shadow-sm';
+    let coreStyles = 'h-full w-full rounded-md border border-border bg-card p-6 shadow-card';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 

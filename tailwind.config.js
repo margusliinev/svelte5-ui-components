@@ -61,7 +61,8 @@ export default {
                     foreground: 'hsl(var(--info-foreground) / <alpha-value>)',
                     hover: 'hsl(var(--info-hover) / <alpha-value>)'
                 },
-                border: 'hsl(var(--border) / <alpha-value>)'
+                border: 'hsl(var(--border) / <alpha-value>)',
+                card: 'hsl(var(--card) / <alpha-value>)'
             },
             borderRadius: {
                 DEFAULT: 'var(--radius)',
@@ -94,6 +95,9 @@ export default {
                 'fade-in': 'fade-in 0.3s ease-out',
                 'fade-out': 'fade-out 0.2s ease-in',
                 'backdrop-fade': 'backdrop-fade 0.3s ease-out'
+            },
+            boxShadow: {
+                card: '0 0 1px 1px rgba(0, 0, 0, 0.05) !important'
             }
         }
     },
