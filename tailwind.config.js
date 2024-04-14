@@ -61,8 +61,7 @@ export default {
                     foreground: 'hsl(var(--info-foreground) / <alpha-value>)',
                     hover: 'hsl(var(--info-hover) / <alpha-value>)'
                 },
-                border: 'hsl(var(--border) / <alpha-value>)',
-                card: 'hsl(var(--card) / <alpha-value>)'
+                border: 'hsl(var(--border) / <alpha-value>)'
             },
             borderRadius: {
                 DEFAULT: 'var(--radius)',
@@ -76,8 +75,25 @@ export default {
                 '3xl': 'calc(var(--radius) + 20px)',
                 full: '9999px'
             },
+            keyframes: {
+                'fade-in': {
+                    '0%': { opacity: '0', transform: 'scale(0.95)', display: 'none' },
+                    '100%': { opacity: '1', display: 'block' }
+                },
+                'fade-out': {
+                    '0%': { opacity: '1', display: 'block' },
+                    '100%': { opacity: '0', transform: 'scale(0.95)', display: 'none' }
+                },
+                'backdrop-fade': {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' }
+                }
+            },
             animation: {
-                spin: 'spin 0.7s linear infinite'
+                spin: 'spin 0.7s linear infinite',
+                'fade-in': 'fade-in 0.3s ease-out',
+                'fade-out': 'fade-out 0.2s ease-in',
+                'backdrop-fade': 'backdrop-fade 0.3s ease-out'
             }
         }
     },

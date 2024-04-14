@@ -17,7 +17,7 @@
         danger: 'border-danger/40 text-danger-hover bg-danger/20',
         info: 'border-info/40 text-info-hover bg-info/20'
     };
-    let coreStyles = `text-sm w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg]:absolute ${alertVariants[variant]}`;
+    let coreStyles = `text-sm w-full rounded-md border p-4 [&>svg~*]:pl-7 [&>svg]:absolute ${alertVariants[variant]}`;
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
