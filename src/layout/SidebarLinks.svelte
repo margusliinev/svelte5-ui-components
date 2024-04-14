@@ -20,7 +20,6 @@
     <li><SidebarLink href="/home/button" {route} {toggleSidebar}>Button</SidebarLink></li>
     <li><SidebarLink href="/home/card" {route} {toggleSidebar}>Card</SidebarLink></li>
     <li><SidebarLink href="/home/icon" {route} {toggleSidebar}>Icon</SidebarLink></li>
-    <li><SidebarLink href="/home/link" {route} {toggleSidebar}>Link</SidebarLink></li>
     <li><SidebarLink href="/home/modal" {route} {toggleSidebar}>Modal</SidebarLink></li>
     <li><SidebarLink href="/home/dropdown" {route} {toggleSidebar}>Dropdown</SidebarLink></li>
     <SidebarHeading class="mt-2">forms</SidebarHeading>
