@@ -22,6 +22,7 @@
     <li><SidebarLink href="/home/icon" {route} {toggleSidebar}>Icon</SidebarLink></li>
     <li><SidebarLink href="/home/modal" {route} {toggleSidebar}>Modal</SidebarLink></li>
     <li><SidebarLink href="/home/dropdown" {route} {toggleSidebar}>Dropdown</SidebarLink></li>
+    <li><SidebarLink href="/home/toaster" {route} {toggleSidebar}>Toaster</SidebarLink></li>
     <SidebarHeading class="mt-2">forms</SidebarHeading>
     <li><SidebarLink href="/home/input" {route} {toggleSidebar}>Input</SidebarLink></li>
     <li><SidebarLink href="/home/select" {route} {toggleSidebar}>Select</SidebarLink></li>

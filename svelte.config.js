@@ -10,7 +10,8 @@ const config = {
         }),
         alias: {
             $components: './src/components',
-            $layout: './src/layout'
+            $layout: './src/layout',
+            $stores: './src/stores'
         }
     },
     compilerOptions: {

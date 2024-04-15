@@ -17,13 +17,14 @@
         else dialog?.close();
     });
 
-    let coreStyles = 'fixed inset-0 bg-card text-foreground w-screen-90 max-w-xl rounded-md p-6 open:animate-fade-in backdrop:animate-backdrop-fade backdrop:backdrop-brightness-50 outline-none';
+    let coreStyles =
+        'fixed inset-0 bg-card text-foreground w-screen-90 max-w-xl rounded-md p-6 open:animate-fade-in backdrop:animate-backdrop-fade backdrop:backdrop-brightness-50 outline-none shadow-xl';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
 <dialog {...rest} bind:this={dialog} class={coreStyles + extraStyles} onclose={() => (open = false)}>
+    {@render children?.()}
     <Button size="icon" class="!absolute right-4 top-4 focus:ring-2 focus:ring-foreground" onclick={() => (open = false)}>
         <Icon name="close" />
     </Button>
-    {@render children?.()}
 </dialog>

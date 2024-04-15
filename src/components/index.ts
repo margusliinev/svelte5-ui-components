@@ -13,5 +13,6 @@ import DropdownMenu from './dropdown/DropdownMenu.svelte';
 import InputField from './InputField.svelte';
 import SelectField from './SelectField.svelte';
 import TextareaField from './TextareaField.svelte';
+import Toaster from './Toaster.svelte';
 
-export { Alert, Badge, Button, Card, Icon, Link, Modal, Spinner, Dropdown, DropdownButton, DropdownItem, DropdownMenu, InputField, SelectField, TextareaField };
+export { Alert, Badge, Button, Card, Icon, Link, Modal, Spinner, Dropdown, DropdownButton, DropdownItem, DropdownMenu, InputField, SelectField, TextareaField, Toaster };
