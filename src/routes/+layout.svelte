@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { Toaster } from '$components';
     import '../styles/fonts.css';
     import '../styles/index.css';
+    import { Toaster } from '$components';
     let { children } = $props();
 </script>
 
