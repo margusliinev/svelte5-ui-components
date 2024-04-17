@@ -3,5 +3,5 @@
 </script>
 
 <form class="max-w-lg">
-    <TextareaField label="Textarea" />
+    <TextareaField name="textarea" label="textarea" />
 </form>

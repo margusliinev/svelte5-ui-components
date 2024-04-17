@@ -2,6 +2,7 @@
     import type { HTMLAttributes } from 'svelte/elements';
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
+        name: string;
         label: string;
         error?: string;
         required?: boolean;
@@ -11,7 +12,7 @@
         placeholder?: string;
     }
 
-    let { label, error, required = true, disabled = false, minlength = 0, maxlength = 500, placeholder, ...rest }: Props = $props();
+    let { name, label, error, required = true, disabled = false, minlength = 0, maxlength = 500, placeholder, ...rest }: Props = $props();
 
     let value = $state('');
 
@@ -20,10 +21,10 @@
 </script>
 
 <div {...rest} class={coreStyles + extraStyles}>
-    <label for={label} aria-disabled={disabled}>{label}</label>
+    <label for={name} aria-disabled={disabled}>{label}</label>
     <span class="absolute right-0 text-sm">{value?.length ?? 0} / {maxlength}</span>
-    <textarea id={label} name={label} {required} {disabled} {minlength} {maxlength} {placeholder} aria-describedby={`${label}-error`} aria-invalid={error ? true : undefined} bind:value />
+    <textarea id={name} {name} {required} {disabled} {minlength} {maxlength} {placeholder} aria-describedby={`${name}-error`} aria-invalid={error ? true : undefined} bind:value />
     {#if error}
-        <div id={`${label}-error`} role="alert" class="text-sm text-danger">{error}</div>
+        <div id={`${name}-error`} role="alert" class="text-sm text-danger">{error}</div>
     {/if}
 </div>

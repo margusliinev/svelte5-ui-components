@@ -10,7 +10,7 @@
 </script>
 
 <form class="max-w-sm">
-    <SelectField label="Frameworks">
+    <SelectField name="frameworks" label="frameworks">
         {#each frameworks as framework (framework.id)}
             <option value={framework.id}>{framework.name}</option>
         {/each}

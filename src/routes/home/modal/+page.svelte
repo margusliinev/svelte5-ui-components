@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Button, Modal } from '$components';
+    import { Button, InputField, Modal } from '$components';
 
     let isModalOpen = $state(false);
 </script>
@@ -8,19 +8,10 @@
 
 <Modal bind:open={isModalOpen}>
     <h1 class="my-4 text-center text-xl font-medium">Create your account</h1>
-    <form class="grid gap-2">
-        <div class="space-y-1">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" />
-        </div>
-        <div class="space-y-1">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" />
-        </div>
-        <div class="space-y-1">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" />
-        </div>
+    <form class="grid gap-4">
+        <InputField type="text" name="username" label="username" />
+        <InputField type="email" name="email" label="email" />
+        <InputField type="password" name="password" label="password" />
         <Button variant="primary" class="mt-4">Register</Button>
     </form>
 </Modal>

@@ -4,24 +4,25 @@
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
         children?: Snippet;
+        name: string;
         label: string;
         error?: string;
         disabled?: boolean;
         placeholder?: string;
     }
 
-    let { children, label, error, disabled = false, placeholder, ...rest }: Props = $props();
+    let { children, label, name, error, disabled = false, placeholder, ...rest }: Props = $props();
 
     let coreStyles = 'space-y-1';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
 <div {...rest} class={coreStyles + extraStyles}>
-    <label for={label} aria-disabled={disabled}>{label}</label>
-    <select id={label} name={label} {disabled} {placeholder} aria-describedby={`${label}-error`} aria-invalid={error ? true : undefined}>
+    <label for={name} aria-disabled={disabled}>{label}</label>
+    <select id={name} {name} {disabled} {placeholder} aria-describedby={`${name}-error`} aria-invalid={error ? true : undefined}>
         {@render children?.()}
     </select>
     {#if error}
-        <div id={`${label}-error`} role="alert" class="text-sm text-danger">{error}</div>
+        <div id={`${name}-error`} role="alert" class="text-sm text-danger">{error}</div>
     {/if}
 </div>
