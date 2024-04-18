@@ -23,7 +23,7 @@
 <div {...rest} class={coreStyles + extraStyles}>
     <label for={name} aria-disabled={disabled}>{label}</label>
     <span class="absolute right-0 text-sm">{value?.length ?? 0} / {maxlength}</span>
-    <textarea id={name} {name} {required} {disabled} {minlength} {maxlength} {placeholder} aria-describedby={`${name}-error`} aria-invalid={error ? true : undefined} bind:value />
+    <textarea id={name} {name} {required} {disabled} {minlength} {maxlength} {placeholder} aria-describedby={`${name}-error`} aria-invalid={error ? true : undefined} bind:value></textarea>
     {#if error}
         <div id={`${name}-error`} role="alert" class="text-sm text-danger">{error}</div>
     {/if}
