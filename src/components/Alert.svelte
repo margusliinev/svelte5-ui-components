@@ -12,19 +12,19 @@
     let { children, variant = 'danger', title, ...rest }: Props = $props();
 
     let alertVariants = {
-        success: 'border-success/40 text-success-hover bg-success/20',
-        warning: 'border-warning/40 text-warning-hover bg-warning/20',
-        danger: 'border-danger/40 text-danger-hover bg-danger/20',
-        info: 'border-info/40 text-info-hover bg-info/20'
+        success: 'border-success/30 text-success-hover bg-emerald-50',
+        warning: 'border-warning/30 text-warning-hover bg-amber-50',
+        danger: 'border-danger/30 text-danger-hover bg-red-50',
+        info: 'border-info/30 text-info-hover bg-sky-50'
     };
-    let coreStyles = `text-sm w-full rounded-md border p-4 [&>svg~*]:pl-7 [&>svg]:absolute ${alertVariants[variant]}`;
+    let coreStyles = `relative w-full rounded-md border p-4 text-sm [&>svg]:absolute [&>svg~p]:pl-7 ${alertVariants[variant]}`;
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
 <div {...rest} role="alert" class={coreStyles + extraStyles}>
     <Icon name={`${variant}`} size="sm" />
     {#if title}
-        <h5 class="mb-1 font-medium capitalize">{title}</h5>
+        <p class="mb-1 font-medium capitalize">{title}</p>
     {/if}
     <p>{@render children?.()}</p>
 </div>
