@@ -6,8 +6,6 @@ This is a repository for custom Svelte 5 UI components that you can copy paste i
 
 ## Technologies
 
-- Bun
-- Vite
 - Svelte 5
 - Typescript
 - Tailwind CSS
@@ -21,9 +19,11 @@ This is a repository for custom Svelte 5 UI components that you can copy paste i
 5. Icon
 6. Link
 7. Modal
-8. Spinner
-9. Toaster
-10. InputField
-11. SelectField
-12. TextareaField
-13. Dropdown
+8. Loader
+9. Spinner
+10. Toaster
+11. Dropdown
+12. InputField
+13. SelectField
+14. TextareaField
+15. CheckboxField
