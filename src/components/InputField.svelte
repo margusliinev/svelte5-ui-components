@@ -4,24 +4,24 @@
     interface Props extends HTMLAttributes<HTMLDivElement> {
         type: 'text' | 'email' | 'password' | 'search' | 'number' | 'tel' | 'url' | 'datetime-local' | 'date' | 'month' | 'week' | 'time';
         name: string;
-        label: string;
+        label?: string;
         error?: string;
         required?: boolean;
         disabled?: boolean;
-        minlength?: number;
-        maxlength?: number;
         placeholder?: string;
     }
 
-    let { type, name, label, error, required = true, disabled = false, minlength = 0, maxlength = 100, placeholder, ...rest }: Props = $props();
+    let { type, name, label, error, required = true, disabled = false, placeholder, ...rest }: Props = $props();
 
     let coreStyles = 'space-y-1';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
 <div {...rest} class={coreStyles + extraStyles}>
-    <label for={name} aria-disabled={disabled}>{label}</label>
-    <input id={name} {name} {type} {required} {disabled} {minlength} {maxlength} {placeholder} aria-describedby={`${name}-error`} aria-invalid={error ? true : undefined} />
+    {#if label}
+        <label for={name} aria-disabled={disabled}>{label}</label>
+    {/if}
+    <input {type} id={name} {name} {required} {disabled} {placeholder} aria-describedby={`${name}-error`} aria-invalid={error ? true : undefined} />
     {#if error}
         <div id={`${name}-error`} role="alert" class="text-sm text-danger">{error}</div>
     {/if}

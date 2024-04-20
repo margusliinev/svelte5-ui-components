@@ -3,7 +3,7 @@
 
     interface Props extends HTMLAttributes<HTMLDivElement> {
         name: string;
-        label: string;
+        label?: string;
         error?: string;
         required?: boolean;
         disabled?: boolean;
@@ -21,7 +21,9 @@
 </script>
 
 <div {...rest} class={coreStyles + extraStyles}>
-    <label for={name} aria-disabled={disabled}>{label}</label>
+    {#if label}
+        <label for={name} aria-disabled={disabled}>{label}</label>
+    {/if}
     <span class="absolute right-0 text-sm">{value?.length ?? 0} / {maxlength}</span>
     <textarea id={name} {name} {required} {disabled} {minlength} {maxlength} {placeholder} aria-describedby={`${name}-error`} aria-invalid={error ? true : undefined} bind:value></textarea>
     {#if error}
