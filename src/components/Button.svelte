@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { HTMLButtonAttributes } from 'svelte/elements';
     import type { Snippet } from 'svelte';
-    import { Spinner } from '$components';
+    import { Loader } from '$components';
 
     interface Props extends HTMLButtonAttributes {
         children?: Snippet;
@@ -36,7 +36,7 @@
 
 <button {...rest} class={coreStyles + extraStyles}>
     {#if isLoading}
-        <Spinner {size} />
+        <Loader {size} />
     {/if}
     {@render children?.()}
 </button>

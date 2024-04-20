@@ -88,16 +88,24 @@ export default {
                 'backdrop-fade': {
                     '0%': { opacity: '0' },
                     '100%': { opacity: '1' }
+                },
+                rotate: {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' }
                 }
             },
             animation: {
                 spin: 'spin 0.7s linear infinite',
+                rotate: 'rotate 0.75s linear infinite',
                 'fade-in': 'fade-in 0.3s ease-out',
                 'fade-out': 'fade-out 0.3s ease-in',
                 'backdrop-fade': 'backdrop-fade 0.2s ease-out'
             },
             boxShadow: {
                 card: '0 0 1px 1px rgba(0, 0, 0, 0.05) !important'
+            },
+            borderWidth: {
+                5: '5px'
             }
         }
     },
