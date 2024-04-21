@@ -6,13 +6,13 @@
         name: string;
         label?: string;
         error?: string;
-        checked?: boolean;
+        value?: string;
         disabled?: boolean;
     }
 
-    let { id, name, label, error, checked = false, disabled = false, ...rest }: Props = $props();
+    let { id, name, label, error, value, disabled = false, ...rest }: Props = $props();
 
-    let coreStyles = '';
+    let coreStyles = 'flex gap-2 items-center';
     let extraStyles = rest.class ? ' ' + rest.class : '';
 </script>
 
@@ -20,7 +20,7 @@
     {#if label}
         <label for={id} aria-disabled={disabled}>{label}</label>
     {/if}
-    <input type="checkbox" {id} {name} {disabled} aria-describedby={`${name}-error`} bind:checked />
+    <input type="radio" {id} {name} {value} {disabled} aria-describedby={`${name}-error`} />
     {#if error}
         <div id={`${name}-error`} role="alert" class="text-sm text-danger">{error}</div>
     {/if}

@@ -63,7 +63,12 @@
         @apply min-h-24 w-full rounded-md border-border text-sm focus:border-2 focus:border-primary focus:ring-0 disabled:cursor-not-allowed aria-[invalid]:border-danger;
     }
 
+    input[type='checkbox'],
+    input[type='radio'] {
+        @apply h-4 w-4 border-border text-primary focus:ring-primary;
+    }
+
     input[type='checkbox'] {
-        @apply h-4 w-4 rounded-sm border-border text-primary focus:ring-primary;
+        @apply rounded-sm;
     }
 }

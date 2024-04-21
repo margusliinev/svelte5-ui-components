@@ -29,4 +29,5 @@
     <li><SidebarLink href="/home/select" {route} {toggleSidebar}>Select</SidebarLink></li>
     <li><SidebarLink href="/home/textarea" {route} {toggleSidebar}>Textarea</SidebarLink></li>
     <li><SidebarLink href="/home/checkbox" {route} {toggleSidebar}>Checkbox</SidebarLink></li>
+    <li><SidebarLink href="/home/radio" {route} {toggleSidebar}>Radio</SidebarLink></li>
 </ul>
